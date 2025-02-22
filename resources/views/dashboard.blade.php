@@ -1,5 +1,5 @@
 @extends('layout')
-@yield('link')
+@section('link')
 
       <script src="{{asset('public/assets/js/layout.js')}}"></script>
       <!-- Bootstrap Css -->
@@ -12,7 +12,7 @@
       <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
       @endsection
   
-     @yield('content')
+     @section('content')
 
          <div class="main-content">
             <div class="page-content">
