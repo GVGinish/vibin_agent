@@ -1,6 +1,9 @@
 @extends('layout')
 @section('link')
 
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
       <script src="{{asset('public/assets/js/layout.js')}}"></script>
       <!-- Bootstrap Css -->
       <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
@@ -106,99 +109,198 @@
                               <ul class="nav nav-pills nav-justified mb-3" role="tablist">
                                  <li class="nav-item waves-effect waves-light">
                                     <a class="nav-link active" data-bs-toggle="tab" href="#pill-justified-home-1" role="tab">
-                                    Home
+                                      Montly
                                     </a>
                                  </li>
                                  <li class="nav-item waves-effect waves-light">
                                     <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-profile-1" role="tab">
-                                    Profile
+                                    Quarterly
                                     </a>
                                  </li>
                                  <li class="nav-item waves-effect waves-light">
                                     <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-messages-1" role="tab">
-                                    Messages
+                                    Half Yearly
                                     </a>
                                  </li>
                                  <li class="nav-item waves-effect waves-light">
                                     <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-settings-1" role="tab">
-                                    Settings
+                                    Yearly
                                     </a>
                                  </li>
                               </ul>
                               <!-- Tab panes -->
                               <div class="tab-content text-muted">
                                  <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
-                                    <div class="d-flex">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                    <div class="card-body">
+                                       <div class="table-responsive">
+                                          <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
+                                             <thead>
+                                                   <tr>
+                                                      <th>Name</th>
+                                                      <th>Position</th>
+                                                      <th>Office</th>
+                                                      <th>Age</th>
+                                                      <th>Start date</th>
+                                                      <th>Salary</th>
+                                                   </tr>
+                                             </thead>
+                                             <tbody>
+                                                   <tr>
+                                                      <td>Tiger Nixon</td>
+                                                      <td>System Architect</td>
+                                                      <td>Edinburgh</td>
+                                                      <td>61</td>
+                                                      <td>2011/04/25</td>
+                                                      <td>$320,800</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Garrett Winters</td>
+                                                      <td>Accountant</td>
+                                                      <td>Tokyo</td>
+                                                      <td>63</td>
+                                                      <td>2011/07/25</td>
+                                                      <td>$170,750</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Ashton Cox</td>
+                                                      <td>Junior Technical Author</td>
+                                                      <td>San Francisco</td>
+                                                      <td>66</td>
+                                                      <td>2009/01/12</td>
+                                                      <td>$86,000</td>
+                                                   </tr>
+                                          </table>
                                        </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          Raw denim you probably haven't heard of them jean shorts Austin.
-                                          Nesciunt tofu stumptown aliqua, retro synth master cleanse.
-                                       </div>
-                                    </div>
-                                    <div class="d-flex mt-2">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
-                                       </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
-                                       </div>
-                                    </div>
+                                   </div>
                                  </div>
                                  <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
-                                    <div class="d-flex">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                 <div class="card-body">
+                                       <div class="table-responsive">
+                                          <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
+                                             <thead>
+                                                   <tr>
+                                                      <th>Name</th>
+                                                      <th>Position</th>
+                                                      <th>Office</th>
+                                                      <th>Age</th>
+                                                      <th>Start date</th>
+                                                      <th>Salary</th>
+                                                   </tr>
+                                             </thead>
+                                             <tbody>
+                                                   <tr>
+                                                      <td>Tiger Nixon</td>
+                                                      <td>System Architect</td>
+                                                      <td>Edinburgh</td>
+                                                      <td>61</td>
+                                                      <td>2011/04/25</td>
+                                                      <td>$320,800</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Garrett Winters</td>
+                                                      <td>Accountant</td>
+                                                      <td>Tokyo</td>
+                                                      <td>63</td>
+                                                      <td>2011/07/25</td>
+                                                      <td>$170,750</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Ashton Cox</td>
+                                                      <td>Junior Technical Author</td>
+                                                      <td>San Francisco</td>
+                                                      <td>66</td>
+                                                      <td>2009/01/12</td>
+                                                      <td>$86,000</td>
+                                                   </tr>
+                                          </table>
                                        </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.
-                                       </div>
-                                    </div>
-                                    <div class="d-flex mt-2">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
-                                       </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
-                                       </div>
-                                    </div>
+                                   </div>
                                  </div>
                                  <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
-                                    <div class="d-flex">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                 <div class="card-body">
+                                       <div class="table-responsive">
+                                          <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
+                                             <thead>
+                                                   <tr>
+                                                      <th>Name</th>
+                                                      <th>Position</th>
+                                                      <th>Office</th>
+                                                      <th>Age</th>
+                                                      <th>Start date</th>
+                                                      <th>Salary</th>
+                                                   </tr>
+                                             </thead>
+                                             <tbody>
+                                                   <tr>
+                                                      <td>Tiger Nixon</td>
+                                                      <td>System Architect</td>
+                                                      <td>Edinburgh</td>
+                                                      <td>61</td>
+                                                      <td>2011/04/25</td>
+                                                      <td>$320,800</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Garrett Winters</td>
+                                                      <td>Accountant</td>
+                                                      <td>Tokyo</td>
+                                                      <td>63</td>
+                                                      <td>2011/07/25</td>
+                                                      <td>$170,750</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Ashton Cox</td>
+                                                      <td>Junior Technical Author</td>
+                                                      <td>San Francisco</td>
+                                                      <td>66</td>
+                                                      <td>2009/01/12</td>
+                                                      <td>$86,000</td>
+                                                   </tr>
+                                          </table>
                                        </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          Each design is a new, unique piece of art birthed into this world, and while you have the opportunity to be creative and make your own style choices.
-                                       </div>
-                                    </div>
-                                    <div class="d-flex mt-2">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
-                                       </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
-                                       </div>
-                                    </div>
+                                   </div>
                                  </div>
                                  <div class="tab-pane" id="pill-justified-settings-1" role="tabpanel">
-                                    <div class="d-flex mt-2">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                 <div class="card-body">
+                                       <div class="table-responsive">
+                                          <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
+                                             <thead>
+                                                   <tr>
+                                                      <th>Name</th>
+                                                      <th>Position</th>
+                                                      <th>Office</th>
+                                                      <th>Age</th>
+                                                      <th>Start date</th>
+                                                      <th>Salary</th>
+                                                   </tr>
+                                             </thead>
+                                             <tbody>
+                                                   <tr>
+                                                      <td>Tiger Nixon</td>
+                                                      <td>System Architect</td>
+                                                      <td>Edinburgh</td>
+                                                      <td>61</td>
+                                                      <td>2011/04/25</td>
+                                                      <td>$320,800</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Garrett Winters</td>
+                                                      <td>Accountant</td>
+                                                      <td>Tokyo</td>
+                                                      <td>63</td>
+                                                      <td>2011/07/25</td>
+                                                      <td>$170,750</td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td>Ashton Cox</td>
+                                                      <td>Junior Technical Author</td>
+                                                      <td>San Francisco</td>
+                                                      <td>66</td>
+                                                      <td>2009/01/12</td>
+                                                      <td>$86,000</td>
+                                                   </tr>
+                                          </table>
                                        </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
-                                       </div>
-                                    </div>
-                                    <div class="d-flex mt-2">
-                                       <div class="flex-shrink-0">
-                                          <i class="ri-checkbox-circle-fill text-success"></i>
-                                       </div>
-                                       <div class="flex-grow-1 ms-2">
-                                          After gathering lots of different opinions and graphic design basics, I came up with a list of 30 graphic design tips that you can start implementing.
-                                       </div>
-                                    </div>
+                                   </div>
                                  </div>
                               </div>
                            </div>
@@ -312,5 +414,18 @@
       <script src="{{asset('public/assets/js/plugins.js')}}"></script>
       <script src="{{asset('public/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
       <script src="{{asset('public/assets/js/pages/dashboard-blog.init.js')}}"></script>
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+      <!--datatable js-->
+      <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+      <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+      <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
+      <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+      <script src="{{asset('public/assets/js/pages/datatables.init.js')}}"></script>
       <script src="{{asset('public/assets/js/app.js')}}"></script>
       @endsection
