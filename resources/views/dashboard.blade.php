@@ -133,7 +133,7 @@
                                  <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
                                     <div class="card-body">
                                        <div class="table-responsive">
-                                          <table id="buttons-datatables-1 class="display table table-bordered" style="width:100%">
+                                          <table id="buttons-datatables class="display table table-bordered" style="width:100%">
                                              <thead>
                                                    <tr>
                                                       <th>Name</th>
@@ -408,7 +408,7 @@
       @section('script')
       <script>
          $(document).ready(function() {
-            $('#buttons-datatables-1').DataTable();
+            $('#buttons-datatables').DataTable();
             $('#buttons-datatables-2').DataTable();
             $('#buttons-datatables-3').DataTable();
             $('#buttons-datatables-4').DataTable();
