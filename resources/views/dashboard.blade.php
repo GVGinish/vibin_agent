@@ -99,7 +99,7 @@
                               </div>
                            </div>
                            <!--end col-->
-                           <div class="col-lg-8">
+                           <div class="col-lg-12">
                            <div class="card">
                            <div class="card-body">
                               <p class="text-muted">Use <code>nav-pills nav-justified</code> class to generate equal-width elements without borders, all horizontal space will be occupied by nav links.</p>
