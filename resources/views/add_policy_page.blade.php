@@ -64,6 +64,58 @@
                                 <div class="tab-pane fade show active" id="steparrow-gen-info" role="tabpanel" aria-labelledby="steparrow-gen-info-tab">
                                     <div>
                                         <div class="row">
+                                        <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-username-input" placeholder="Enter user name" required >
+                                                    <div class="invalid-feedback">Please enter a user name</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-Fathername-input">Father Name</label>
+                                                    <input type="Fathername" class="form-control" id="steparrow-gen-info-Fathername-input" placeholder="Enter Fathername" required >
+                                                    <div class="invalid-feedback">Please enter an father name</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-mother-input">Mother Name</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-mother-input" placeholder="Enter mother name" required >
+                                                    <div class="invalid-feedback">Please enter a mother name</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-email-input">Date of Birth</label>
+                                                    <input type="date" class="form-control" id="steparrow-gen-info-email-input" placeholder="Enter email" required max="{{date('Y-m-d')}}">
+                                                    <div class="invalid-feedback">Please enter an DOB</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-nominee-input">Nominee Name</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-nominee-input" placeholder="Enter nominee name" required >
+                                                    <div class="invalid-feedback">Please enter a nominee name</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-n_dob-input">Nominee BOB</label>
+                                                    <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" placeholder="Enter nominee dob" required >
+                                                    <div class="invalid-feedback">Please enter an nominee name</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-phone-input">Phone</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-phone-input" placeholder="Enter phone number" required >
+                                                    <div class="invalid-feedback">Please enter a phone number</div>
+                                                </div>
+                                            </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-email-input">Email</label>
@@ -71,24 +123,16 @@
                                                     <div class="invalid-feedback">Please enter an email address</div>
                                                 </div>
                                             </div>
-                                            <div class="col-lg-6">
+                                        </div>
+                                        <div class="col-lg-6">
                                                 <div class="mb-3">
-                                                    <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-username-input" placeholder="Enter user name" required >
-                                                    <div class="invalid-feedback">Please enter a user name</div>
+                                                    <label class="form-label" for="steparrow-gen-info-address-input">Address</label>
+                                                    <textarea type="text" class="form-control" id="steparrow-gen-info-address-input" placeholder="Enter address" required ></textarea>
+                                                    <div class="invalid-feedback">Please enter a address</div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="mb-3">
-                                            <label class="form-label" for="steparrow-gen-info-password-input">Password</label>
-                                            <input type="password" class="form-control" id="steparrow-gen-info-password-input" placeholder="Enter password" required >
-                                            <div class="invalid-feedback">Please enter a password</div>
-                                        </div>
-                                        <div>
-                                            <label class="form-label" for="steparrow-gen-info-confirm-password-input">Confirm Password</label>
-                                            <input type="password" class="form-control" id="steparrow-gen-info-confirm-password-input" placeholder="Enter confirm password" required >
-                                            <div class="invalid-feedback">Please enter a confirm password</div>
-                                        </div>
+                                      
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                         <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to more info</button>
