@@ -740,13 +740,13 @@
                      <li class="menu-title"><span data-key="t-menu">Menu</span></li>
             
                      <li class="nav-item">
-                        <a class="nav-link menu-link" href="widgets.html">
-                        <i class="bx bx-aperture"></i> <span data-key="t-widgets">Widgets</span>
+                        <a class="nav-link menu-link" href="{{route('dashboard')}}">
+                        <i class="bx bx-aperture"></i> <span data-key="t-widgets">Dashboard</span>
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link menu-link" href="widgets.html">
-                        <i class="bx bx-layout"></i> <span data-key="t-widgets">Widgets</span>
+                        <a class="nav-link menu-link" href="{{route('add_policy_page')}}">
+                        <i class="bx bx-layout"></i> <span data-key="t-widgets">Add Policy</span>
                         </a>
                      </li>
                      <li class="nav-item">
