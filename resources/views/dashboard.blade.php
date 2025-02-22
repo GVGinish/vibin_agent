@@ -104,17 +104,220 @@
                                  <div class="card-header align-items-center d-flex">
                                     <h5 class="card-title mb-0 flex-grow-1">Site Visitors</h5>
                                     <div class="flex-shrink-0">
-                                       <div class="dropdown card-header-dropdown">
-                                          <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                          <span class="fw-semibold text-uppercase fs-12">Sort by: </span><span class="text-muted">Current Week<i class="mdi mdi-chevron-down ms-1"></i></span>
-                                          </a>
-                                          <div class="dropdown-menu dropdown-menu-end">
-                                             <a class="dropdown-item" href="#">Today</a>
-                                             <a class="dropdown-item" href="#">Last Week</a>
-                                             <a class="dropdown-item" href="#">Last Month</a>
-                                             <a class="dropdown-item" href="#">Current Year</a>
-                                          </div>
+                                    <div class="row">
+                     <div class="col-xxl-6">
+                        <h5 class="mb-3">Pills Tabs</h5>
+                        <div class="card">
+                           <div class="card-body">
+                              <p class="text-muted">Use <code>nav-pills</code> class to generate particular selected nav links without borders.</p>
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-pills nav-success mb-3" role="tablist">
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#home-1" role="tab">Home</a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#profile-1" role="tab">Profile</a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab">Messages</a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#settings-1" role="tab">Settings</a>
+                                 </li>
+                              </ul>
+                              <!-- Tab panes -->
+                              <div class="tab-content text-muted">
+                                 <div class="tab-pane active" id="home-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
                                        </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Raw denim you probably haven't heard of them jean shorts Austin.
+                                          Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="profile-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="messages-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Each design is a new, unique piece of art birthed into this world, and while you have the opportunity to be creative and make your own style choices.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="settings-1" role="tabpanel">
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          After gathering lots of different opinions and graphic design basics, I came up with a list of 30 graphic design tips that you can start implementing.
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+                     </div>
+                     <!--end col-->
+                     <div class="col-xxl-6">
+                        <h5 class="mb-3">Pills Justified Tabs</h5>
+                        <div class="card">
+                           <div class="card-body">
+                              <p class="text-muted">Use <code>nav-pills nav-justified</code> class to generate equal-width elements without borders, all horizontal space will be occupied by nav links.</p>
+                              <!-- Nav tabs -->
+                              <ul class="nav nav-pills nav-justified mb-3" role="tablist">
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link active" data-bs-toggle="tab" href="#pill-justified-home-1" role="tab">
+                                    Home
+                                    </a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-profile-1" role="tab">
+                                    Profile
+                                    </a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-messages-1" role="tab">
+                                    Messages
+                                    </a>
+                                 </li>
+                                 <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#pill-justified-settings-1" role="tab">
+                                    Settings
+                                    </a>
+                                 </li>
+                              </ul>
+                              <!-- Tab panes -->
+                              <div class="tab-content text-muted">
+                                 <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Raw denim you probably haven't heard of them jean shorts Austin.
+                                          Nesciunt tofu stumptown aliqua, retro synth master cleanse.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Too much or too little spacing, as in the example below, can make things unpleasant for the reader. The goal is to make your text as comfortable to read as possible.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          In some designs, you might adjust your tracking to create a certain artistic effect. It can also help you fix fonts that are poorly spaced to begin with.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          A wonderful serenity has taken possession of my entire soul, like these sweet mornings of spring which I enjoy with my whole heart.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          Each design is a new, unique piece of art birthed into this world, and while you have the opportunity to be creative and make your own style choices.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="tab-pane" id="pill-justified-settings-1" role="tabpanel">
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          For that very reason, I went on a quest and spoke to many different professional graphic designers and asked them what graphic design tips they live.
+                                       </div>
+                                    </div>
+                                    <div class="d-flex mt-2">
+                                       <div class="flex-shrink-0">
+                                          <i class="ri-checkbox-circle-fill text-success"></i>
+                                       </div>
+                                       <div class="flex-grow-1 ms-2">
+                                          After gathering lots of different opinions and graphic design basics, I came up with a list of 30 graphic design tips that you can start implementing.
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!-- end card-body -->
+                        </div>
+                        <!-- end card -->
+                     </div>
+                     <!--end col-->
+                  </div>
                                     </div>
                                  </div>
                                  <!-- end card header -->
