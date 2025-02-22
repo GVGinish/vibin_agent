@@ -64,7 +64,7 @@
                                 <div class="tab-pane fade show active" id="steparrow-gen-info" role="tabpanel" aria-labelledby="steparrow-gen-info-tab">
                                     <div>
                                         <div class="row">
-                                        <div class="col-lg-6">
+                                            <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-username-input" placeholder="Enter user name" required >
@@ -79,6 +79,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-mother-input">Mother Name</label>
@@ -94,6 +95,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-nominee-input">Nominee Name</label>
@@ -109,6 +111,8 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
+
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-phone-input">Phone</label>
@@ -124,6 +128,7 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <div class="row">
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-address-input">Address</label>
