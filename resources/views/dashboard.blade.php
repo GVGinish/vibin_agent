@@ -133,7 +133,7 @@
                                  <div class="tab-pane active" id="pill-justified-home-1" role="tabpanel">
                                     <div class="card-body">
                                        <div class="table-responsive">
-                                          <table id="buttons-datatables class="display table table-bordered" style="width:100%">
+                                          <table id="buttons-datatables-1" class="display table table-bordered" style="width:100%">
                                              <thead>
                                                    <tr>
                                                       <th>Name</th>
@@ -176,7 +176,7 @@
                                  <div class="tab-pane" id="pill-justified-profile-1" role="tabpanel">
                                  <div class="card-body">
                                        <div class="table-responsive">
-                                          <table id="buttons-datatables-2 class="display table table-bordered" style="width:100%">
+                                          <table id="buttons-datatables-2" class="display table table-bordered" style="width:100%">
                                              <thead>
                                                    <tr>
                                                       <th>Name</th>
@@ -219,7 +219,7 @@
                                  <div class="tab-pane" id="pill-justified-messages-1" role="tabpanel">
                                  <div class="card-body">
                                        <div class="table-responsive">
-                                          <table id="buttons-datatables-3 class="display table table-bordered" style="width:100%">
+                                          <table id="buttons-datatables-3" class="display table table-bordered" style="width:100%">
                                              <thead>
                                                    <tr>
                                                       <th>Name</th>
@@ -262,7 +262,7 @@
                                  <div class="tab-pane" id="pill-justified-settings-1" role="tabpanel">
                                  <div class="card-body">
                                        <div class="table-responsive">
-                                          <table id="buttons-datatables-4 class="display table table-bordered" style="width:100%">
+                                          <table id="buttons-datatables-4" class="display table table-bordered" style="width:100%">
                                              <thead>
                                                    <tr>
                                                       <th>Name</th>
@@ -406,14 +406,6 @@
       @endsection
        
       @section('script')
-      <script>
-         $(document).ready(function() {
-            $('#buttons-datatables').DataTable();
-            $('#buttons-datatables-2').DataTable();
-            $('#buttons-datatables-3').DataTable();
-            $('#buttons-datatables-4').DataTable();
-         });
-         </script>
       <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
@@ -436,5 +428,12 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
       <script src="{{asset('public/assets/js/pages/datatables.init.js')}}"></script>
       <script src="{{asset('public/assets/js/app.js')}}"></script>
-
+      <script>
+         $(document).ready(function() {
+            $('#buttons-datatables-1').DataTable();
+            $('#buttons-datatables-2').DataTable();
+            $('#buttons-datatables-3').DataTable();
+            $('#buttons-datatables-4').DataTable();
+         });
+         </script>
       @endsection
