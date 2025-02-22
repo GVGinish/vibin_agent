@@ -52,7 +52,7 @@
                                         <button class="nav-link done" id="steparrow-gen-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-gen-info" type="button" role="tab" aria-controls="steparrow-gen-info" aria-selected="true">General</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Description</button>
+                                        <button class="nav-link" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Bank Details</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">Finish</button>
@@ -136,6 +136,13 @@
                                                     <div class="invalid-feedback">Please enter a address</div>
                                                 </div>
                                             </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-occupation-input">Occupation</label>
+                                                    <input type="email" class="form-control" id="steparrow-gen-info-occupation-input" placeholder="Enter occupation" required >
+                                                    <div class="invalid-feedback">Please enter an occupation</div>
+                                                </div>
+                                            </div>
                                         </div>
                                       
                                     </div>
@@ -147,14 +154,31 @@
 
                                 <div class="tab-pane fade" id="steparrow-description-info" role="tabpanel" aria-labelledby="steparrow-description-info-tab">
                                     <div>
-                                        <div class="mb-3">
-                                            <label for="formFile" class="form-label">Upload Image</label>
-                                            <input class="form-control" type="file" id="formFile" />
+                                    <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-bank-input">Bank Name</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-bank-input" placeholder="Enter bank name" required >
+                                                    <div class="invalid-feedback">Please enter a bank name</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-ifdc-input">IFSC</label>
+                                                    <input type="Fathername" class="form-control" id="steparrow-gen-info-ifdc-input" placeholder="Enter ifdc" required >
+                                                    <div class="invalid-feedback">Please enter an ifdc code</div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <label class="form-label" for="des-info-description-input">Description</label>
-                                            <textarea class="form-control" placeholder="Enter Description" id="des-info-description-input" rows="3" required></textarea>
-                                            <div class="invalid-feedback">Please enter a description</div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-account-input">Account Number</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-account-input" placeholder="Enter account number" required >
+                                                    <div class="invalid-feedback">Please enter a account number</div>
+                                                </div>
+                                            </div>
+                                        
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
