@@ -1,13 +1,19 @@
-    @extends('layout')
-    @section('link')
-      <link href="{{asset('public/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+@extends('layout')
+@yield('link')
+
       <script src="{{asset('public/assets/js/layout.js')}}"></script>
+      <!-- Bootstrap Css -->
       <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+      <!-- Icons Css -->
       <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+      <!-- App Css-->
       <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+      <!-- custom Css-->
       <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
       @endsection
-      @section('content')
+  
+     @yield('content')
+
          <div class="main-content">
             <div class="page-content">
                <div class="container-fluid">
@@ -15,11 +21,11 @@
                   <div class="row">
                      <div class="col-12">
                         <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                           <h4 class="mb-sm-0">API Key</h4>
+                           <h4 class="mb-sm-0">Blog</h4>
                            <div class="page-title-right">
                               <ol class="breadcrumb m-0">
-                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Apps</a></li>
-                                 <li class="breadcrumb-item active">API Key</li>
+                                 <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboards</a></li>
+                                 <li class="breadcrumb-item active">Blog</li>
                               </ol>
                            </div>
                         </div>
@@ -27,222 +33,473 @@
                   </div>
                   <!-- end page title -->
                   <div class="row">
-                     <div class="col-lg-4">
-                        <div class="card card-height-100">
-                           <div class="card-body">
-                              <h5 class="card-title mb-3">Developer Plan</h5>
-                              <div class="progress animated-progress custom-progress mb-1">
-                                 <div class="progress-bar bg-secondary" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
-                              </div>
-                              <p class="text-muted mb-2">You used 215 of 2000 of your API</p>
-                              <div class="text-end">
-                                 <button type="button" class="btn btn-primary btn-sm create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal">Create API Key</button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <!--end col-->
-                     <div class="col-lg-4">
-                        <div class="card card-animate card-height-100">
-                           <div class="card-body">
-                              <div class="d-flex justify-content-between">
-                                 <div>
-                                    <p class="fw-semibold text-muted mb-0">Successful conversions</p>
-                                    <h2 class="mt-4 ff-secondary fw-bold"><span class="counter-value" data-target="50"></span></h2>
-                                    <p class="mb-0 text-muted"><span class="badge bg-light text-success mb-0"><i class="ri-arrow-up-line align-middle"></i> 8.24 % </span> 7 last week</p>
-                                 </div>
-                                 <div>
-                                    <div class="avatar-sm flex-shrink-0">
-                                       <span class="avatar-title bg-success-subtle rounded-circle fs-2">
-                                       <i data-feather="check-circle" class="text-success"></i>
-                                       </span>
+                     <div class="col-xl-9">
+                        <div class="row">
+                           <div class="col-lg-3">
+                              <div class="card">
+                                 <div class="card-body d-flex gap-3 align-items-center">
+                                    <div class="avatar-sm">
+                                       <div class="avatar-title border bg-success-subtle border-success border-opacity-25 rounded-2 fs-17">
+                                          <i data-feather="users" class="icon-dual-success"></i>
+                                       </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                       <h5 class="fs-15">17.6k</h5>
+                                       <p class="mb-0 text-muted">Followers</p>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <!-- end card body -->
-                        </div>
-                     </div>
-                     <!--end col-->
-                     <div class="col-lg-4">
-                        <div class="card card-animate card-height-100">
-                           <div class="card-body">
-                              <div class="d-flex justify-content-between">
-                                 <div>
-                                    <p class="fw-semibold text-muted mb-0">Failed conversions</p>
-                                    <h2 class="mt-4 ff-secondary fw-bold"><span class="counter-value" data-target="8"></span></h2>
-                                    <p class="mb-0 text-muted"><span class="badge bg-light text-danger mb-0"><i class="ri-arrow-down-line align-middle"></i> 25.87 % </span> 7 last week</p>
-                                 </div>
-                                 <div>
-                                    <div class="avatar-sm flex-shrink-0">
-                                       <span class="avatar-title bg-danger-subtle rounded-circle fs-2">
-                                       <i data-feather="alert-octagon" class="text-danger"></i>
-                                       </span>
+                           <!--end col-->
+                           <div class="col-lg-3">
+                              <div class="card">
+                                 <div class="card-body d-flex gap-3 align-items-center">
+                                    <div class="avatar-sm">
+                                       <div class="avatar-title border bg-warning-subtle border-warning border-opacity-25 rounded-2 fs-17">
+                                          <i data-feather="file-text" class="icon-dual-warning"></i>
+                                       </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                       <h5 class="fs-15">149</h5>
+                                       <p class="mb-0 text-muted">Total Post</p>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <!-- end card body -->
-                        </div>
-                     </div>
-                     <!--end col-->
-                  </div>
-                  <!-- end row -->
-                  <div class="row">
-                     <div class="col-lg-12">
-                        <div class="card" id="apiKeyList">
-                           <div class="card-header d-flex align-items-center">
-                              <h5 class="card-title flex-grow-1 mb-0">API Keys</h5>
-                              <div class="d-flex gap-1 flex-wrap">
-                                 <button class="btn btn-soft-danger" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
-                                 <button type="button" class="btn btn-primary create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal"><i class="ri-add-line align-bottom me-1"></i> Add API Key</button>
+                           <!--end col-->
+                           <div class="col-lg-3">
+                              <div class="card">
+                                 <div class="card-body d-flex gap-3 align-items-center">
+                                    <div class="avatar-sm">
+                                       <div class="avatar-title border bg-danger-subtle border-danger border-opacity-25 rounded-2 fs-17">
+                                          <i data-feather="heart" class="icon-dual-danger"></i>
+                                       </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                       <h5 class="fs-15">24.8k</h5>
+                                       <p class="mb-0 text-muted">Likes</p>
+                                    </div>
+                                 </div>
                               </div>
                            </div>
-                           <div class="card-body">
-                              <div>
-                                 <div class="table-responsive table-card mb-3">
-                                    <table class="table align-middle table-nowrap mb-0">
-                                       <thead class="table-light">
-                                          <tr>
-                                             <th scope="col" style="width: 50px;">
-                                                <div class="form-check">
-                                                   <input class="form-check-input" type="checkbox" id="checkAll" value="option">
-                                                </div>
-                                             </th>
-                                             <th class="sort d-none" data-sort="id" scope="col">Id</th>
-                                             <th class="sort" data-sort="name" scope="col">Name</th>
-                                             <th class="sort" data-sort="createBy" scope="col">Created By</th>
-                                             <th class="sort" data-sort="apikey" scope="col">API Key</th>
-                                             <th class="sort" data-sort="status" scope="col">Status</th>
-                                             <th class="sort" data-sort="create_date" scope="col">Create Date</th>
-                                             <th class="sort" data-sort="expiry_date" scope="col">Expiry Date</th>
-                                             <th scope="col">Action</th>
-                                          </tr>
-                                       </thead>
-                                       <tbody class="list form-check-all">
-                                          <tr>
-                                             <th scope="row">
-                                                <div class="form-check">
-                                                   <input class="form-check-input" type="checkbox" name="chk_child" value="option1">
-                                                </div>
-                                             </th>
-                                             <td class="id" style="display:none;"><a href="javascript:void(0);" class="fw-medium link-primary">#VZ001</a></td>
-                                             <td class="name">Streamlab</td>
-                                             <td class="createBy">Nicholas Ball</td>
-                                             <td class="apikey">
-                                                <input type="text" class="form-control apikey-value" readonly value="b5815DE8A7224438932eb296Z5">
-                                             </td>
-                                             <td class="status"><span class="badge bg-danger-subtle text-danger">Disable</span></td>
-                                             <td class="create_date">24 Sep, 2022</td>
-                                             <td class="expiry_date">24 Jan, 2023</td>
-                                             <td>
-                                                <div class="dropdown">
-                                                   <button class="btn btn-soft-secondary btn-sm dropdown" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                                   <i class="ri-more-fill align-middle"></i>
-                                                   </button>
-                                                   <ul class="dropdown-menu dropdown-menu-end">
-                                                      <li><a class="dropdown-item edit-item-btn" href="#api-key-modal" data-bs-toggle="modal">Rename</a></li>
-                                                      <li><a class="dropdown-item regenerate-api-btn" href="#api-key-modal" data-bs-toggle="modal">Regenerate Key</a></li>
-                                                      <li><a class="dropdown-item disable-btn" href="javascript:void(0);">Disable</a></li>
-                                                      <li><a class="dropdown-item remove-item-btn" data-bs-toggle="modal" href="#deleteApiKeyModal">Delete</a></li>
-                                                   </ul>
-                                                </div>
-                                             </td>
-                                          </tr>
-                                       </tbody>
-                                    </table>
-                                    <div class="noresult" style="display: none">
-                                       <div class="text-center">
-                                          <lord-icon src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#121331,secondary:#08a88a" style="width:75px;height:75px"></lord-icon>
-                                          <h5 class="mt-2">Sorry! No Result Found</h5>
-                                          <p class="text-muted mb-0">We've searched more than 150+ API Keys We did not find any API for you search.</p>
+                           <!--end col-->
+                           <div class="col-lg-3">
+                              <div class="card">
+                                 <div class="card-body d-flex gap-3 align-items-center">
+                                    <div class="avatar-sm">
+                                       <div class="avatar-title border bg-primary-subtle border-primary border-opacity-25 rounded-2 fs-17">
+                                          <i data-feather="bar-chart" class="icon-dual-primary"></i>
+                                       </div>
+                                    </div>
+                                    <div class="flex-grow-1">
+                                       <h5 class="fs-15">54.3k</h5>
+                                       <p class="mb-0 text-muted">Views</p>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--end col-->
+                           <div class="col-lg-8">
+                              <div class="card">
+                                 <div class="card-header align-items-center d-flex">
+                                    <h5 class="card-title mb-0 flex-grow-1">Site Visitors</h5>
+                                    <div class="flex-shrink-0">
+                                       <div class="dropdown card-header-dropdown">
+                                          <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span class="fw-semibold text-uppercase fs-12">Sort by: </span><span class="text-muted">Current Week<i class="mdi mdi-chevron-down ms-1"></i></span>
+                                          </a>
+                                          <div class="dropdown-menu dropdown-menu-end">
+                                             <a class="dropdown-item" href="#">Today</a>
+                                             <a class="dropdown-item" href="#">Last Week</a>
+                                             <a class="dropdown-item" href="#">Last Month</a>
+                                             <a class="dropdown-item" href="#">Current Year</a>
+                                          </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div class="d-flex justify-content-end mt-3">
-                                    <div class="pagination-wrap hstack gap-2">
-                                       <a class="page-item pagination-prev disabled" href="#">
-                                       Previous
-                                       </a>
-                                       <ul class="pagination listjs-pagination mb-0"></ul>
-                                       <a class="page-item pagination-next" href="#">
-                                       Next
-                                       </a>
+                                 <!-- end card header -->
+                                 <div class="card-body">
+                                    <div id="column_chart_datalabel" data-colors='["--vz-primary"]' class="apex-charts" dir="ltr"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--end col-->
+                           <div class="col-lg-4">
+                              <div class="card">
+                                 <div class="card-header align-items-center d-flex">
+                                    <h5 class="card-title mb-0 flex-grow-1">Top Social Media Shares</h5>
+                                    <div class="flex-shrink-0">
+                                       <div class="dropdown card-header-dropdown">
+                                          <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span class="text-muted fs-16"><i class="mdi mdi-dots-vertical align-middle"></i></span>
+                                          </a>
+                                          <div class="dropdown-menu dropdown-menu-end">
+                                             <a class="dropdown-item" href="#">Today</a>
+                                             <a class="dropdown-item" href="#">Last Week</a>
+                                             <a class="dropdown-item" href="#">Last Month</a>
+                                             <a class="dropdown-item" href="#">Current Year</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- end card header -->
+                                 <div class="card-body">
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-primary-subtle text-primary rounded-2 fs-17">
+                                             <i class="ri-facebook-box-fill"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">Facebook</h6>
+                                       <h6 class="flex-shrink-0 mb-0">32k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-danger-subtle text-danger rounded-2 fs-17">
+                                             <i class="ri-google-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">Google</h6>
+                                       <h6 class="flex-shrink-0 mb-0">13k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-success-subtle text-success rounded-2 fs-17">
+                                             <i class="ri-whatsapp-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">WhatsApp</h6>
+                                       <h6 class="flex-shrink-0 mb-0">11k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-dark-subtle text-dark rounded-2 fs-17">
+                                             <i class="ri-invision-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">Invision</h6>
+                                       <h6 class="flex-shrink-0 mb-0">19k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-danger-subtle text-danger rounded-2 fs-17">
+                                             <i class="ri-instagram-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">Instagram</h6>
+                                       <h6 class="flex-shrink-0 mb-0">18k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center mb-2">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-info-subtle text-info rounded-2 fs-17">
+                                             <i class="ri-telegram-2-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">Telegram</h6>
+                                       <h6 class="flex-shrink-0 mb-0">26k</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                       <div class="avatar-xs flex-shrink-0">
+                                          <div class="avatar-title bg-secondary-subtle text-secondary rounded-2 fs-17">
+                                             <i class="ri-youtube-line"></i>
+                                          </div>
+                                       </div>
+                                       <h6 class="mb-0 fs-14 flex-grow-1">YouTube</h6>
+                                       <h6 class="flex-shrink-0 mb-0">9k</h6>
                                     </div>
                                  </div>
                               </div>
                            </div>
-                           <!-- end card body -->
                         </div>
-                        <!-- end card -->
+                        <!--end row-->
                      </div>
-                     <!-- end col -->
+                     <!--end col-->
+                     <div class="col-xl-3">
+                        <div class="card">
+                           <div class="card-header align-items-center d-flex">
+                              <h4 class="card-title mb-0 flex-grow-1">Recent Comment</h4>
+                              <div class="flex-shrink-0">
+                                 <button type="button" class="btn btn-soft-primary btn-sm">
+                                 View All
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="card-body">
+                              <div data-simplebar class="mx-n3 px-3" style="height: 375px;">
+                                 <div class="vstack gap-3">
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-3.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Diana Kohler <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Really well-written and informative. The emotional connection strategy is something I’ll be testing out more! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-5.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Tonya Noble <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Incredibly helpful tips, especially about adding a call to action. I’ve been missing that step and will implement it in my next post! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-6.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Donald Palmer <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-7.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Joseph Parker <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Great post! Simple yet powerful tips that I can start using immediately. Thanks for sharing your expertise! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-9.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Timothy Smith <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Wow, this has opened my eyes to a new perspective on creating content. Emotional triggers—such a smart way to engage users! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-10.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Alexis Clarke <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
+                                       </div>
+                                    </div>
+                                    <div class="d-flex gap-3">
+                                       <img src="{{asset('public/assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
+                                       <div class="flex-shrink-1">
+                                          <h6 class="mb-2">Thomas Taylor <span class="text-muted">Has commented</span></h6>
+                                          <p class="text-muted mb-0">" Loved the section on visual storytelling. It’s true that images speak louder on social media platforms. More visuals in my next posts for sure! "</p>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-xl-8">
+                        <div class="card">
+                           <div class="card-header align-items-center d-flex">
+                              <h4 class="card-title mb-0 flex-grow-1">Recent Article</h4>
+                              <div class="flex-shrink-0">
+                                 <div class="dropdown card-header-dropdown">
+                                    <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    <span class="fw-semibold text-uppercase fs-12">Sort by: </span><span class="text-muted">Popular <i class="mdi mdi-chevron-down ms-1"></i></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                       <a class="dropdown-item" href="#">Popular</a>
+                                       <a class="dropdown-item" href="#">Newest</a>
+                                       <a class="dropdown-item" href="#">Oldest</a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="card-body">
+                              <div class="table-responsive table-card">
+                                 <table class="table table-hover table-nowrap align-middle mb-0">
+                                    <thead class="table-light">
+                                       <tr class="text-muted">
+                                          <th scope="col">No</th>
+                                          <th scope="col">Blog Title</th>
+                                          <th scope="col">Post Date</th>
+                                          <th scope="col">Category</th>
+                                          <th scope="col">Comment</th>
+                                          <th scope="col">Like</th>
+                                          <th scope="col">Shared</th>
+                                          <th scope="col">Viewers</th>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                       <tr>
+                                          <td>01</td>
+                                          <td>
+                                             <img src="{{asset('public/assets/images/blog/img-2.jpg')}}" alt="" class="me-2 rounded" height="40">
+                                             <a href="#!" class="text-body fw-medium">The Evolution of Minimalism in Design</a>
+                                          </td>
+                                          <td>20 Sep, 2024</td>
+                                          <td><span class="badge bg-success-subtle text-success p-2">MinimalDesign</span></td>
+                                          <td>23</td>
+                                          <td>157</td>
+                                          <td>11</td>
+                                          <td>2149</td>
+                                       </tr>
+                                       <tr>
+                                          <td>02</td>
+                                          <td>
+                                             <img src="{{asset('public/assets/images/blog/img-3.jpg')}}" alt="" class="me-2 rounded" height="40">
+                                             <a href="#!" class="text-body fw-medium">Mastering User Experience Through Storytelling</a>
+                                          </td>
+                                          <td>11 Feb, 2024</td>
+                                          <td><span class="badge bg-success-subtle text-success p-2">UXDesign</span></td>
+                                          <td>547</td>
+                                          <td>1458</td>
+                                          <td>317</td>
+                                          <td>34978</td>
+                                       </tr>
+                                       <tr>
+                                          <td>03</td>
+                                          <td>
+                                             <img src="{{asset('public/assets/images/blog/img-4.jpg')}}" alt="" class="me-2 rounded" height="40">
+                                             <a href="#!" class="text-body fw-medium">Designing for Purpose: A Mindful Approach</a>
+                                          </td>
+                                          <td>15 Sep, 2024</td>
+                                          <td><span class="badge bg-success-subtle text-success p-2">CreativeProcess</span></td>
+                                          <td>88</td>
+                                          <td>649</td>
+                                          <td>237</td>
+                                          <td>1982</td>
+                                       </tr>
+                                       <tr>
+                                          <td>04</td>
+                                          <td>
+                                             <img src="{{asset('public/assets/images/blog/img-5.jpg')}}" alt="" class="me-2 rounded" height="40">
+                                             <a href="#!" class="text-body fw-medium">How to Overcome Creative Block</a>
+                                          </td>
+                                          <td>09 July, 2024</td>
+                                          <td><span class="badge bg-success-subtle text-success p-2">CreativeBlock</span></td>
+                                          <td>67</td>
+                                          <td>1114</td>
+                                          <td>1547</td>
+                                          <td>15747</td>
+                                       </tr>
+                                       <tr>
+                                          <td>05</td>
+                                          <td>
+                                             <img src="{{asset('public/assets/images/blog/img-6.jpg')}}" alt="" class="me-2 rounded" height="40">
+                                             <a href="#!" class="text-body fw-medium">Building Brand Identity through Design</a>
+                                          </td>
+                                          <td>19 Nov, 2024</td>
+                                          <td><span class="badge bg-success-subtle text-success p-2">BrandDesign</span></td>
+                                          <td>8</td>
+                                          <td>10</td>
+                                          <td>7</td>
+                                          <td>110</td>
+                                       </tr>
+                                    </tbody>
+                                    <!-- end tbody -->
+                                 </table>
+                                 <!-- end table -->
+                              </div>
+                              <div class="align-items-center mt-3 row g-3 text-center text-sm-start">
+                                 <div class="col-sm">
+                                    <div class="text-muted">Showing <span class="fw-semibold">5</span> of <span class="fw-semibold">14</span> Results
+                                    </div>
+                                 </div>
+                                 <div class="col-sm-auto">
+                                    <ul class="pagination pagination-separated pagination-sm justify-content-center justify-content-sm-start mb-0">
+                                       <li class="page-item disabled">
+                                          <a href="#!" class="page-link">←</a>
+                                       </li>
+                                       <li class="page-item">
+                                          <a href="#!" class="page-link">1</a>
+                                       </li>
+                                       <li class="page-item active">
+                                          <a href="#!" class="page-link">2</a>
+                                       </li>
+                                       <li class="page-item">
+                                          <a href="#!" class="page-link">3</a>
+                                       </li>
+                                       <li class="page-item">
+                                          <a href="#!" class="page-link">→</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <!--end col-->
+                     <div class="col-xl-4">
+                        <div class="row">
+                           <div class="col-xl-12">
+                              <div class="card">
+                                 <div class="card-body">
+                                    <div class="d-flex">
+                                       <div class="flex-shrink-0 me-3">
+                                          <img src="{{asset('public/assets/images/users/avatar-1.jpg')}}" alt="" class="avatar-sm rounded-circle img-thumbnail">
+                                       </div>
+                                       <div class="flex-grow-1">
+                                          <div class="d-flex">
+                                             <div class="flex-grow-1">
+                                                <h5 class="mb-1 card-title">Anna Adame</h5>
+                                                <p class="mb-0 text-muted">Founder</p>
+                                             </div>
+                                             <div class="flex-shrink-0 dropdown ms-2">
+                                                <button class="btn btn-light btn-sm" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="bx bxs-cog align-middle me-1"></i> Setting
+                                                </button>
+                                                <div class="dropdown-menu dropdown-menu-end">
+                                                   <a class="dropdown-item" href="#">Action</a>
+                                                   <a class="dropdown-item" href="#">Another action</a>
+                                                   <a class="dropdown-item" href="#">Something else</a>
+                                                </div>
+                                             </div>
+                                          </div>
+                                          <div class="row mt-3">
+                                             <div class="col-4">
+                                                <div class="border p-2 rounded border-dashed">
+                                                   <p class="text-muted text-truncate mb-2">Total Post</p>
+                                                   <h5 class="mb-0">26</h5>
+                                                </div>
+                                             </div>
+                                             <div class="col-4">
+                                                <div class="border p-2 rounded border-dashed">
+                                                   <p class="text-muted text-truncate mb-2">Subscribes</p>
+                                                   <h5 class="mb-0">17k</h5>
+                                                </div>
+                                             </div>
+                                             <div class="col-4">
+                                                <div class="border p-2 rounded border-dashed">
+                                                   <p class="text-muted text-truncate mb-2">Viewers</p>
+                                                   <h5 class="mb-0">487k</h5>
+                                                </div>
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--end col-->
+                           <div class="col-xl-12">
+                              <div class="card">
+                                 <div class="card-header align-items-center d-flex">
+                                    <h5 class="card-title mb-0 flex-grow-1">Used Device</h5>
+                                    <div class="flex-shrink-0">
+                                       <div class="dropdown card-header-dropdown">
+                                          <a class="text-reset dropdown-btn" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                          <span class="text-muted fs-16"><i class="mdi mdi-dots-vertical align-middle"></i></span>
+                                          </a>
+                                          <div class="dropdown-menu dropdown-menu-end">
+                                             <a class="dropdown-item" href="#">Today</a>
+                                             <a class="dropdown-item" href="#">Last Week</a>
+                                             <a class="dropdown-item" href="#">Last Month</a>
+                                             <a class="dropdown-item" href="#">Current Year</a>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <!-- end card header -->
+                                 <div class="card-body">
+                                    <div id="gradient_chart" data-colors='["--vz-primary", "--vz-success", "--vz-warning"]' class="apex-charts" dir="ltr"></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <!--end col-->
+                        </div>
+                        <!--end row-->
+                     </div>
+                     <!--end col-->
                   </div>
-                  <!-- end row -->
+                  <!--end row-->
                </div>
                <!-- container-fluid -->
             </div>
             <!-- End Page-content -->
-            <!-- Modal -->
-            <div class="modal fade" id="api-key-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-               <div class="modal-dialog">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Create API Key</h5>
-                        <button type="button" class="btn-close" id="close-modal" data-bs-dismiss="modal" aria-label="Close"></button>
-                     </div>
-                     <div class="modal-body">
-                        <form autocomplete="off">
-                           <div id="api-key-error-msg" class="alert alert-danger py-2 d-none"></div>
-                           <input type="hidden" id="apikeyId">
-                           <div class="mb-3">
-                              <label for="api-key-name" class="form-label">API Key Name <span class="text-danger">*</span></label>
-                              <input type="text" class="form-control" id="api-key-name" placeholder="Enter api key name">
-                           </div>
-                           <div class="mb-3" id="apikey-element" style="display: none;">
-                              <label for="api-key" class="form-label">API Key</label>
-                              <input type="text" class="form-control" id="api-key" disabled value="b5815DE8A7224438932eb296Z5">
-                           </div>
-                        </form>
-                     </div>
-                     <div class="modal-footer">
-                        <div class="hstack gap-2 justify-content-end">
-                           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary" id="createApi-btn">Create API</button>
-                           <button type="button" class="btn btn-primary" id="add-btn">Add</button>
-                           <button type="button" class="btn btn-primary" id="edit-btn">Save Changes</button>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- modal content -->
-               </div>
-            </div>
-            <!-- end modal -->
-            <!-- Modal -->
-            <div class="modal fade zoomIn" id="deleteApiKeyModal" tabindex="-1" aria-hidden="true">
-               <div class="modal-dialog modal-dialog-centered">
-                  <div class="modal-content">
-                     <div class="modal-header">
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="deleteRecord-close"></button>
-                     </div>
-                     <div class="modal-body">
-                        <div class="mt-2 text-center">
-                           <lord-icon src="https://cdn.lordicon.com/gsqxdxog.json" trigger="loop" colors="primary:#f7b84b,secondary:#f06548" style="width:100px;height:100px"></lord-icon>
-                           <div class="mt-4 pt-2 fs-15 mx-4 mx-sm-5">
-                              <h4>Are you Sure ?</h4>
-                              <p class="text-muted mx-4 mb-0">Are you Sure You want to Remove this API Key ?</p>
-                           </div>
-                        </div>
-                        <div class="d-flex gap-2 justify-content-center mt-4 mb-2">
-                           <button type="button" class="btn w-sm btn-light" data-bs-dismiss="modal">Close</button>
-                           <button type="button" class="btn w-sm btn-danger " id="delete-record">Yes, Delete It!</button>
-                        </div>
-                     </div>
-                  </div>
-                  <!-- /.modal-content -->
-               </div>
-            </div>
-            <!--end modal -->
             <footer class="footer">
                <div class="container-fluid">
                   <div class="row">
@@ -258,7 +515,9 @@
                </div>
             </footer>
          </div>
-      @endsection        
+
+      @endsection
+       
       @section('script')
       <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
@@ -266,10 +525,7 @@
       <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
       <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
       <script src="{{asset('public/assets/js/plugins.js')}}"></script>
-      <script src="{{asset('public/assets/libs/list.js/list.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/list.pagination.js/list.pagination.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/sweetalert2/sweetalert2.min.js')}}"></script>
-      <script src="{{asset('public/assets/js/pages/api-key.init.js')}}"></script>
+      <script src="{{asset('public/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
+      <script src="{{asset('public/assets/js/pages/dashboard-blog.init.js')}}"></script>
       <script src="{{asset('public/assets/js/app.js')}}"></script>
       @endsection
- 

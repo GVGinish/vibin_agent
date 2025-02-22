@@ -1,14 +1,17 @@
 <!doctype html>
 <html lang="en" data-layout="horizontal" data-topbar="dark" data-sidebar-size="lg" data-sidebar="light" data-sidebar-image="none" data-preloader="disable">
+   <!-- Mirrored from themesbrand.com/velzon/html/saas/dashboard-blog.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 22 Feb 2025 05:13:47 GMT -->
    <head>
       <meta charset="utf-8" />
-      <title>API Key | Velzon - Admin & Dashboard Template</title>
+      <title>Blog | Velzon - Admin & Dashboard Template</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
       <meta content="Themesbrand" name="author" />
       <!-- App favicon -->
-      <link rel="shortcut icon" href="{{asset('public/assets/images/favicon.ico')}}">
+      <link rel="shortcut icon" href="assets/images/favicon.ico">
+      <!-- Layout config Js -->
       @yield('link')
+
    </head>
    <body>
       <!-- Begin page -->
@@ -138,7 +141,52 @@
                            </form>
                         </div>
                      </div>
-        
+                     <div class="dropdown ms-1 topbar-head-dropdown header-item">
+                        <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img id="header-lang-img" src="{{asset('public/assets/images/flags/us.svg')}}" alt="Header Language" height="20" class="rounded">
+                        </button>
+                        <div class="dropdown-menu dropdown-menu-end">
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language py-2" data-lang="en" title="English">
+                           <img src="{{asset('public/assets/images/flags/us.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">English</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="sp" title="Spanish">
+                           <img src="{{asset('public/assets/images/flags/spain.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">Española</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="gr" title="German">
+                           <img src="{{asset('public/assets/images/flags/germany.svg')}}" alt="user-image" class="me-2 rounded" height="18"> <span class="align-middle">Deutsche</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="it" title="Italian">
+                           <img src="{{asset('public/assets/images/flags/italy.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">Italiana</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ru" title="Russian">
+                           <img src="{{asset('public/assets/images/flags/russia.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">русский</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ch" title="Chinese">
+                           <img src="{{asset('public/assets/images/flags/china.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">中国人</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="fr" title="French">
+                           <img src="{{asset('public/assets/images/flags/french.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">français</span>
+                           </a>
+                           <!-- item-->
+                           <a href="javascript:void(0);" class="dropdown-item notify-item language" data-lang="ar" title="Arabic">
+                           <img src="{{asset('public/assets/images/flags/ae.svg')}}" alt="user-image" class="me-2 rounded" height="18">
+                           <span class="align-middle">Arabic</span>
+                           </a>
+                        </div>
+                     </div>
                      <div class="dropdown topbar-head-dropdown ms-1 header-item">
                         <button type="button" class="btn btn-icon btn-topbar btn-ghost-secondary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <i class='bx bx-category-alt fs-22'></i>
@@ -2403,6 +2451,7 @@
             </div>
          </div>
       </div>
-      @yield('script')
+      <!-- JAVASCRIPT -->
+     @yield('script')
    </body>
 </html>
