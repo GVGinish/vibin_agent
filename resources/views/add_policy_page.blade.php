@@ -1,8 +1,5 @@
 @extends('layout')
 @section('link')
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap.min.css" />
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.2/css/buttons.dataTables.min.css">
     <script src="{{asset('public/assets/js/layout.js')}}"></script>
     <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
     <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
@@ -11,274 +8,530 @@
     @endsection
   
   @section('content')
-        <div class="main-content">
-            <div class="page-content">
-                <div class="container-fluid">
+  <div class="main-content">
 
-                    <!-- start page title -->
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="page-title-box d-sm-flex align-items-center justify-content-between">
-                                <h4 class="mb-sm-0">Datatables</h4>
+<div class="page-content">
+    <div class="container-fluid">
 
-                                <div class="page-title-right">
-                                    <ol class="breadcrumb m-0">
-                                        <li class="breadcrumb-item"><a href="javascript: void(0);">Tables</a></li>
-                                        <li class="breadcrumb-item active">Datatables</li>
-                                    </ol>
-                                </div>
+        <!-- start page title -->
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                    <h4 class="mb-sm-0">Wizard</h4>
 
-                            </div>
-                        </div>
+                    <div class="page-title-right">
+                        <ol class="breadcrumb m-0">
+                            <li class="breadcrumb-item"><a href="javascript: void(0);">Forms</a></li>
+                            <li class="breadcrumb-item active">Wizard</li>
+                        </ol>
                     </div>
-                    <!-- end page title -->
 
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="card">
-                                <div class="card-header">
-                                    <h5 class="card-title mb-0">Buttons Datatables</h5>
+                </div>
+            </div>
+        </div>
+        <!-- end page title -->
+
+        <div class="row">
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Progress Nav Steps</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body">
+                        <form action="#" class="form-steps" autocomplete="off">
+                            <div class="text-center pt-3 pb-4 mb-1">
+                                <h5>Signup Your Account</h5>
+                            </div>
+                            <div id="custom-progress-bar" class="progress-nav mb-4">
+                                <div class="progress" style="height: 1px;">
+                                    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
                                 </div>
-                                <div class="card-body">
-                                    <div class="table-responsive">
-                                        <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
-                                            <thead>
-                                                <tr>
-                                                    <th>Name</th>
-                                                    <th>Position</th>
-                                                    <th>Office</th>
-                                                    <th>Age</th>
-                                                    <th>Start date</th>
-                                                    <th>Salary</th>
-                                                </tr>
-                                            </thead>
-                                            <tbody>
-                                                <tr>
-                                                    <td>Tiger Nixon</td>
-                                                    <td>System Architect</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>61</td>
-                                                    <td>2011/04/25</td>
-                                                    <td>$320,800</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Garrett Winters</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>63</td>
-                                                    <td>2011/07/25</td>
-                                                    <td>$170,750</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Ashton Cox</td>
-                                                    <td>Junior Technical Author</td>
-                                                    <td>San Francisco</td>
-                                                    <td>66</td>
-                                                    <td>2009/01/12</td>
-                                                    <td>$86,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Cedric Kelly</td>
-                                                    <td>Senior Javascript Developer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td>2012/03/29</td>
-                                                    <td>$433,060</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Airi Satou</td>
-                                                    <td>Accountant</td>
-                                                    <td>Tokyo</td>
-                                                    <td>33</td>
-                                                    <td>2008/11/28</td>
-                                                    <td>$162,700</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Brielle Williamson</td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>New York</td>
-                                                    <td>61</td>
-                                                    <td>2012/12/02</td>
-                                                    <td>$372,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Herrod Chandler</td>
-                                                    <td>Sales Assistant</td>
-                                                    <td>San Francisco</td>
-                                                    <td>59</td>
-                                                    <td>2012/08/06</td>
-                                                    <td>$137,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Rhona Davidson</td>
-                                                    <td>Integration Specialist</td>
-                                                    <td>Tokyo</td>
-                                                    <td>55</td>
-                                                    <td>2010/10/14</td>
-                                                    <td>$327,900</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Colleen Hurst</td>
-                                                    <td>Javascript Developer</td>
-                                                    <td>San Francisco</td>
-                                                    <td>39</td>
-                                                    <td>2009/09/15</td>
-                                                    <td>$205,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Sonya Frost</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>23</td>
-                                                    <td>2008/12/13</td>
-                                                    <td>$103,600</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jena Gaines</td>
-                                                    <td>Office Manager</td>
-                                                    <td>London</td>
-                                                    <td>30</td>
-                                                    <td>2008/12/19</td>
-                                                    <td>$90,560</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Quinn Flynn</td>
-                                                    <td>Support Lead</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>22</td>
-                                                    <td>2013/03/03</td>
-                                                    <td>$342,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Charde Marshall</td>
-                                                    <td>Regional Director</td>
-                                                    <td>San Francisco</td>
-                                                    <td>36</td>
-                                                    <td>2008/10/16</td>
-                                                    <td>$470,600</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Haley Kennedy</td>
-                                                    <td>Senior Marketing Designer</td>
-                                                    <td>London</td>
-                                                    <td>43</td>
-                                                    <td>2012/12/18</td>
-                                                    <td>$313,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Tatyana Fitzpatrick</td>
-                                                    <td>Regional Director</td>
-                                                    <td>London</td>
-                                                    <td>19</td>
-                                                    <td>2010/03/17</td>
-                                                    <td>$385,750</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Michael Silva</td>
-                                                    <td>Marketing Designer</td>
-                                                    <td>London</td>
-                                                    <td>66</td>
-                                                    <td>2012/11/27</td>
-                                                    <td>$198,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Paul Byrd</td>
-                                                    <td>Chief Financial Officer (CFO)</td>
-                                                    <td>New York</td>
-                                                    <td>64</td>
-                                                    <td>2010/06/09</td>
-                                                    <td>$725,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Gloria Little</td>
-                                                    <td>Systems Administrator</td>
-                                                    <td>New York</td>
-                                                    <td>59</td>
-                                                    <td>2009/04/10</td>
-                                                    <td>$237,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Bradley Greer</td>
-                                                    <td>Software Engineer</td>
-                                                    <td>London</td>
-                                                    <td>41</td>
-                                                    <td>2012/10/13</td>
-                                                    <td>$132,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Dai Rios</td>
-                                                    <td>Personnel Lead</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>35</td>
-                                                    <td>2012/09/26</td>
-                                                    <td>$217,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Jenette Caldwell</td>
-                                                    <td>Development Lead</td>
-                                                    <td>New York</td>
-                                                    <td>30</td>
-                                                    <td>2011/09/03</td>
-                                                    <td>$345,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Yuri Berry</td>
-                                                    <td>Chief Marketing Officer (CMO)</td>
-                                                    <td>New York</td>
-                                                    <td>40</td>
-                                                    <td>2009/06/25</td>
-                                                    <td>$675,000</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Caesar Vance</td>
-                                                    <td>Pre-Sales Support</td>
-                                                    <td>New York</td>
-                                                    <td>21</td>
-                                                    <td>2011/12/12</td>
-                                                    <td>$106,450</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Doris Wilder</td>
-                                                    <td>Sales Assistant</td>
-                                                    <td>Sydney</td>
-                                                    <td>23</td>
-                                                    <td>2010/09/20</td>
-                                                    <td>$85,600</td>
-                                                </tr>
-                                                
-                                                <tr>
-                                                    <td>Gavin Cortez</td>
-                                                    <td>Team Leader</td>
-                                                    <td>San Francisco</td>
-                                                    <td>22</td>
-                                                    <td>2008/10/26</td>
-                                                    <td>$235,500</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Martena Mccray</td>
-                                                    <td>Post-Sales support</td>
-                                                    <td>Edinburgh</td>
-                                                    <td>46</td>
-                                                    <td>2011/03/09</td>
-                                                    <td>$324,050</td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Unity Butler</td>
-                                                    <td>Marketing Designer</td>
-                                                    <td>San Francisco</td>
-                                                    <td>47</td>
-                                                    <td>2009/12/09</td>
-                                                    <td>$85,675</td>
-                                                </tr>
-                                        </table>
+
+                                <ul class="nav nav-pills progress-bar-tab custom-nav" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link rounded-pill active" data-progressbar="custom-progress-bar" id="pills-gen-info-tab" data-bs-toggle="pill" data-bs-target="#pills-gen-info" type="button" role="tab" aria-controls="pills-gen-info" aria-selected="true">1</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link rounded-pill" data-progressbar="custom-progress-bar" id="pills-info-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-info-desc" type="button" role="tab" aria-controls="pills-info-desc" aria-selected="false">2</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link rounded-pill" data-progressbar="custom-progress-bar" id="pills-success-tab" data-bs-toggle="pill" data-bs-target="#pills-success" type="button" role="tab" aria-controls="pills-success" aria-selected="false">3</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade show active" id="pills-gen-info" role="tabpanel" aria-labelledby="pills-gen-info-tab">
+                                    <div>
+                                        <div class="mb-4">
+                                            <div>
+                                                <h5 class="mb-1">General Information</h5>
+                                                <p class="text-muted">Fill all Information as below</p>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="gen-info-email-input">Email</label>
+                                                    <input type="email" class="form-control" id="gen-info-email-input" placeholder="Enter email" required >
+                                                    <div class="invalid-feedback">Please enter an email address</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="gen-info-username-input">User Name</label>
+                                                    <input type="text" class="form-control" id="gen-info-username-input" placeholder="Enter user name" required >
+                                                    <div class="invalid-feedback">Please enter a user name</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="gen-info-password-input">Password</label>
+                                            <input type="password" class="form-control" id="gen-info-password-input" placeholder="Enter Password" required >
+                                            <div class="invalid-feedback">Please enter a password</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="pills-info-desc-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to more info</button>
                                     </div>
                                 </div>
+                                <!-- end tab pane -->
+
+                                <div class="tab-pane fade" id="pills-info-desc" role="tabpanel" aria-labelledby="pills-info-desc-tab">
+                                    <div>
+                                        <div class="text-center">
+                                            <div class="profile-user position-relative d-inline-block mx-auto mb-2">
+                                                <img src="assets/images/users/user-dummy-img.jpg" class="rounded-circle avatar-lg img-thumbnail user-profile-image" alt="user-profile-image">
+                                                <div class="avatar-xs p-0 rounded-circle profile-photo-edit">
+                                                    <input id="profile-img-file-input" type="file" class="profile-img-file-input" accept="image/png, image/jpeg">
+                                                    <label for="profile-img-file-input" class="profile-photo-edit avatar-xs">
+                                                        <span class="avatar-title rounded-circle bg-light text-body">
+                                                            <i class="ri-camera-fill"></i>
+                                                        </span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <h5 class="fs-14">Add Image</h5>
+
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="gen-info-description-input">Description</label>
+                                            <textarea class="form-control" placeholder="Enter Description" id="gen-info-description-input" rows="2" required></textarea>
+                                            <div class="invalid-feedback">Please enter a description</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                        <button type="button" class="btn btn-link text-decoration-none btn-label previestab" data-previous="pills-gen-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to General</button>
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="pills-success-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</button>
+                                    </div>
+                                </div>
+                                <!-- end tab pane -->
+
+                                <div class="tab-pane fade" id="pills-success" role="tabpanel" aria-labelledby="pills-success-tab">
+                                    <div>
+                                        <div class="text-center">
+
+                                            <div class="mb-4">
+                                                <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#0ab39c,secondary:#405189" style="width:120px;height:120px"></lord-icon>
+                                            </div>
+                                            <h5>Well Done !</h5>
+                                            <p class="text-muted">You have Successfully Signed Up</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end tab pane -->
                             </div>
-                        </div>
+                            <!-- end tab content -->
+                        </form>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+            <div class="col-xl-6">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Arrow Nav Steps</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body">
+                        <form action="#" class="form-steps" autocomplete="off">
+                            <div class="text-center pt-3 pb-4 mb-1 d-flex justify-content-center">
+                                <img src="assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                                <img src="assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="17">
+                            </div>
+                            <div class="step-arrow-nav mb-4">
+
+                                <ul class="nav nav-pills custom-nav nav-justified" role="tablist">
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link done" id="steparrow-gen-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-gen-info" type="button" role="tab" aria-controls="steparrow-gen-info" aria-selected="true">General</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link active" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Description</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">Finish</button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="tab-content">
+                                <div class="tab-pane fade" id="steparrow-gen-info" role="tabpanel" aria-labelledby="steparrow-gen-info-tab">
+                                    <div>
+                                        <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-email-input">Email</label>
+                                                    <input type="email" class="form-control" id="steparrow-gen-info-email-input" placeholder="Enter email" required >
+                                                    <div class="invalid-feedback">Please enter an email address</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-username-input" placeholder="Enter user name" required >
+                                                    <div class="invalid-feedback">Please enter a user name</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mb-3">
+                                            <label class="form-label" for="steparrow-gen-info-password-input">Password</label>
+                                            <input type="password" class="form-control" id="steparrow-gen-info-password-input" placeholder="Enter password" required >
+                                            <div class="invalid-feedback">Please enter a password</div>
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="steparrow-gen-info-confirm-password-input">Confirm Password</label>
+                                            <input type="password" class="form-control" id="steparrow-gen-info-confirm-password-input" placeholder="Enter confirm password" required >
+                                            <div class="invalid-feedback">Please enter a confirm password</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to more info</button>
+                                    </div>
+                                </div>
+                                <!-- end tab pane -->
+
+                                <div class="tab-pane fade show active" id="steparrow-description-info" role="tabpanel" aria-labelledby="steparrow-description-info-tab">
+                                    <div>
+                                        <div class="mb-3">
+                                            <label for="formFile" class="form-label">Upload Image</label>
+                                            <input class="form-control" type="file" id="formFile" />
+                                        </div>
+                                        <div>
+                                            <label class="form-label" for="des-info-description-input">Description</label>
+                                            <textarea class="form-control" placeholder="Enter Description" id="des-info-description-input" rows="3" required></textarea>
+                                            <div class="invalid-feedback">Please enter a description</div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                        <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-gen-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to General</button>
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="pills-experience-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</button>
+                                    </div>
+                                </div>
+                                <!-- end tab pane -->
+
+                                <div class="tab-pane fade" id="pills-experience" role="tabpanel">
+                                    <div class="text-center">
+
+                                        <div class="avatar-md mt-5 mb-4 mx-auto">
+                                            <div class="avatar-title bg-light text-success display-4 rounded-circle">
+                                                <i class="ri-checkbox-circle-fill"></i>
+                                            </div>
+                                        </div>
+                                        <h5>Well Done !</h5>
+                                        <p class="text-muted">You have Successfully Signed Up</p>
+                                    </div>
+                                </div>
+                                <!-- end tab pane -->
+                            </div>
+                            <!-- end tab content -->
+                        </form>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+        </div><!-- end row -->
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Vertical nav Steps</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body form-steps">
+                        <form class="vertical-navs-step">
+                            <div class="row gy-5">
+                                <div class="col-lg-3">
+                                    <div class="nav flex-column custom-nav nav-pills" role="tablist" aria-orientation="vertical">
+                                        <button class="nav-link done" id="v-pills-bill-info-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bill-info" type="button" role="tab" aria-controls="v-pills-bill-info" aria-selected="true">
+                                            <span class="step-title me-2">
+                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 1
+                                            </span>
+                                            Billing Info
+                                        </button>
+                                        <button class="nav-link active" id="v-pills-bill-address-tab" data-bs-toggle="pill" data-bs-target="#v-pills-bill-address" type="button" role="tab" aria-controls="v-pills-bill-address" aria-selected="false">
+                                            <span class="step-title me-2">
+                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 2
+                                            </span>
+                                            Address
+                                        </button>
+                                        <button class="nav-link" id="v-pills-payment-tab" data-bs-toggle="pill" data-bs-target="#v-pills-payment" type="button" role="tab" aria-controls="v-pills-payment" aria-selected="false">
+                                            <span class="step-title me-2">
+                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 3
+                                            </span>
+                                            Payment
+                                        </button>
+                                        <button class="nav-link" id="v-pills-finish-tab" data-bs-toggle="pill" data-bs-target="#v-pills-finish" type="button" role="tab" aria-controls="v-pills-finish" aria-selected="false">
+                                            <span class="step-title me-2">
+                                                <i class="ri-close-circle-fill step-icon me-2"></i> Step 4
+                                            </span>
+                                            Finish
+                                        </button>
+                                    </div>
+                                    <!-- end nav -->
+                                </div> <!-- end col-->
+                                <div class="col-lg-6">
+                                    <div class="px-lg-4">
+                                        <div class="tab-content">
+                                            <div class="tab-pane fade" id="v-pills-bill-info" role="tabpanel" aria-labelledby="v-pills-bill-info-tab">
+                                                <div>
+                                                    <h5>Billing Info</h5>
+                                                    <p class="text-muted">Fill all information below</p>
+                                                </div>
+
+                                                <div>
+                                                    <div class="row g-3">
+                                                        <div class="col-sm-6">
+                                                            <label for="firstName" class="form-label">First name</label>
+                                                            <input type="text" class="form-control" id="firstName" placeholder="Enter first name" value="" required >
+                                                            <div class="invalid-feedback">Please enter a first name</div>
+                                                        </div>
+
+                                                        <div class="col-sm-6">
+                                                            <label for="lastName" class="form-label">Last name</label>
+                                                            <input type="text" class="form-control" id="lastName" placeholder="Enter last name" value="" required >
+                                                            <div class="invalid-feedback">Please enter a last name</div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <label for="username" class="form-label">Username</label>
+                                                            <div class="input-group">
+                                                                <span class="input-group-text">@</span>
+                                                                <input type="text" class="form-control" id="username" placeholder="Username" required >
+                                                                <div class="invalid-feedback">Please enter a user name</div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <label for="email" class="form-label">Email <span class="text-muted">(Optional)</span></label>
+                                                            <input type="email" class="form-control" id="email" placeholder="Enter Email" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="v-pills-bill-address-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Shipping</button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade show active" id="v-pills-bill-address" role="tabpanel" aria-labelledby="v-pills-bill-address-tab">
+                                                <div>
+                                                    <h5>Shipping Address</h5>
+                                                    <p class="text-muted">Fill all information below</p>
+                                                </div>
+
+                                                <div>
+                                                    <div class="row g-3">
+                                                        <div class="col-12">
+                                                            <label for="address" class="form-label">Address</label>
+                                                            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required >
+                                                            <div class="invalid-feedback">Please enter a address</div>
+                                                        </div>
+
+                                                        <div class="col-12">
+                                                            <label for="address2" class="form-label">Address 2 <span class="text-muted">(Optional)</span></label>
+                                                            <input type="text" class="form-control" id="address2" placeholder="Apartment or suite" />
+                                                        </div>
+
+                                                        <div class="col-md-5">
+                                                            <label for="country" class="form-label">Country</label>
+                                                            <select class="form-select" id="country" required>
+                                                                <option value="">Choose...</option>
+                                                                <option>United States</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">Please select a country</div>
+                                                        </div>
+
+                                                        <div class="col-md-4">
+                                                            <label for="state" class="form-label">State</label>
+                                                            <select class="form-select" id="state">
+                                                                <option value="">Choose...</option>
+                                                                <option>California</option>
+                                                            </select>
+                                                            <div class="invalid-feedback">Please select a state</div>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label for="zip" class="form-label">Zip</label>
+                                                            <input type="text" class="form-control" id="zip" placeholder="" />
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="my-4 text-muted">
+
+                                                    <div class="form-check mb-2">
+                                                        <input type="checkbox" class="form-check-input" id="same-address">
+                                                        <label class="form-check-label" for="same-address">Shipping address is the same as my billing address</label>
+                                                    </div>
+
+                                                    <div class="form-check">
+                                                        <input type="checkbox" class="form-check-input" id="save-info">
+                                                        <label class="form-check-label" for="save-info">Save this information for next time</label>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="v-pills-bill-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Billing Info</button>
+                                                    <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="v-pills-payment-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Payment</button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade" id="v-pills-payment" role="tabpanel" aria-labelledby="v-pills-payment-tab">
+                                                <div>
+                                                    <h5>Payment</h5>
+                                                    <p class="text-muted">Fill all information below</p>
+                                                </div>
+
+                                                <div>
+                                                    <div class="my-3">
+                                                        <div class="form-check form-check-inline">
+                                                            <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                                                            <label class="form-check-label" for="credit">Credit card</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                                                            <label class="form-check-label" for="debit">Debit card</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input id="paypal" name="paymentMethod" type="radio" class="form-check-input" required>
+                                                            <label class="form-check-label" for="paypal">PayPal</label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row gy-3">
+                                                        <div class="col-md-12">
+                                                            <label for="cc-name" class="form-label">Name on card</label>
+                                                            <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                                                            <small class="text-muted">Full name as displayed on card</small>
+                                                            <div class="invalid-feedback">
+                                                                Name on card is required
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-6">
+                                                            <label for="cc-number" class="form-label">Credit card number</label>
+                                                            <input type="text" class="form-control" id="cc-number" placeholder="" required>
+                                                            <div class="invalid-feedback">
+                                                                Credit card number is required
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label for="cc-expiration" class="form-label">Expiration</label>
+                                                            <input type="text" class="form-control" id="cc-expiration" placeholder="" required>
+                                                            <div class="invalid-feedback">
+                                                                Expiration date required
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="col-md-3">
+                                                            <label for="cc-cvv" class="form-label">CVV</label>
+                                                            <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                                                            <div class="invalid-feedback">
+                                                                Security code required
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex align-items-start gap-3 mt-4">
+                                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="v-pills-bill-address-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Shipping Info</button>
+                                                    <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="v-pills-finish-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i> Order Complete</button>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                            <div class="tab-pane fade" id="v-pills-finish" role="tabpanel" aria-labelledby="v-pills-finish-tab">
+                                                <div class="text-center pt-4 pb-2">
+
+                                                    <div class="mb-4">
+                                                        <lord-icon src="https://cdn.lordicon.com/lupuorrc.json" trigger="loop" colors="primary:#0ab39c,secondary:#405189" style="width:120px;height:120px"></lord-icon>
+                                                    </div>
+                                                    <h5>Your Order is Completed !</h5>
+                                                    <p class="text-muted">You Will receive an order confirmation email with details of your order.</p>
+                                                </div>
+                                            </div>
+                                            <!-- end tab pane -->
+                                        </div>
+                                        <!-- end tab content -->
+                                    </div>
+                                </div>
+                                <!-- end col -->
+
+                                <div class="col-lg-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-3">
+                                        <h5 class="fs-14 text-primary mb-0"><i class="ri-shopping-cart-fill align-middle me-2"></i> Your cart</h5>
+                                        <span class="badge bg-danger rounded-pill">3</span>
+                                    </div>
+                                    <ul class="list-group mb-3">
+                                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                                            <div>
+                                                <h6 class="my-0">Product name</h6>
+                                                <small class="text-muted">Brief description</small>
+                                            </div>
+                                            <span class="text-muted">$12</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                                            <div>
+                                                <h6 class="my-0">Second product</h6>
+                                                <small class="text-muted">Brief description</small>
+                                            </div>
+                                            <span class="text-muted">$8</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between lh-sm">
+                                            <div>
+                                                <h6 class="my-0">Third item</h6>
+                                                <small class="text-muted">Brief description</small>
+                                            </div>
+                                            <span class="text-muted">$5</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between bg-light">
+                                            <div class="text-success">
+                                                <h6 class="my-0">Discount code</h6>
+                                                <small>−$5 Discount</small>
+                                            </div>
+                                            <span class="text-success">−$5</span>
+                                        </li>
+                                        <li class="list-group-item d-flex justify-content-between">
+                                            <span>Total (USD)</span>
+                                            <strong>$20</strong>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- end row -->
+                        </form>
                     </div>
                 </div>
-            </div>           
+                <!-- end -->
+            </div>
+            <!-- end col -->
         </div>
+        <!-- end row -->
+    </div>
+    <!-- container-fluid -->
+</div>
+
+</div>
         @endsection
        
        @section('script')
@@ -291,17 +544,7 @@
     <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
     <script src="{{asset('public/assets/js/plugins.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-    <!--datatable js-->
-    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://cdn.datatables.net/responsive/2.2.9/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/vfs_fonts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.53/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
-    <script src="{{asset('public/assets/js/pages/datatables.init.js')}}"></script>
+    <script src="{{asset('public/assets/js/pages/form-wizard.init.js')}}"></script>
     <script src="{{asset('public/assets/js/app.js')}}"></script>
+
     @endsection

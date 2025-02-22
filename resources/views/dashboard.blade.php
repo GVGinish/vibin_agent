@@ -436,28 +436,4 @@
             $('#buttons-datatables-4').DataTable();
          });
          </script>
-         <script>
-$(document).ready(function() {
-    function initializeDataTable(tableId) {
-        $('#' + tableId).DataTable({
-            dom: 'Bfrtip',
-            buttons: [
-                {
-                    extend: 'pdfHtml5',
-                    text: 'Download PDF',
-                    title: 'Table Data',
-                    className: 'btn btn-primary'
-                }
-            ]
-        });
-    }
-
-    // Initialize tables
-    initializeDataTable('buttons-datatables-1');
-    initializeDataTable('buttons-datatables-2');
-    initializeDataTable('buttons-datatables-3');
-    initializeDataTable('buttons-datatables-4');
-});
-
-            </script>
       @endsection
