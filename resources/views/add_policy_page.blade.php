@@ -61,7 +61,7 @@
                             </div>
 
                             <div class="tab-content">
-                                <div class="tab-pane fade" id="steparrow-gen-info" role="tabpanel" aria-labelledby="steparrow-gen-info-tab">
+                                <div class="tab-pane fade show active" id="steparrow-gen-info" role="tabpanel" aria-labelledby="steparrow-gen-info-tab">
                                     <div>
                                         <div class="row">
                                             <div class="col-lg-6">
@@ -96,7 +96,7 @@
                                 </div>
                                 <!-- end tab pane -->
 
-                                <div class="tab-pane fade show active" id="steparrow-description-info" role="tabpanel" aria-labelledby="steparrow-description-info-tab">
+                                <div class="tab-pane fade" id="steparrow-description-info" role="tabpanel" aria-labelledby="steparrow-description-info-tab">
                                     <div>
                                         <div class="mb-3">
                                             <label for="formFile" class="form-label">Upload Image</label>
