@@ -37,13 +37,13 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title mb-0">Arrow Nav Steps</h4>
+                        <h4 class="card-title mb-0">Add New Policy</h4>
                     </div><!-- end card header -->
                     <div class="card-body">
                         <form action="#" class="form-steps" autocomplete="off">
                             <div class="text-center pt-3 pb-4 mb-1 d-flex justify-content-center">
-                                <img src="assets/images/logo-dark.png" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                                <img src="assets/images/logo-light.png" class="card-logo card-logo-light" alt="logo light" height="17">
+                                <img src="{{asset('public/assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                                <img src="{{asset('public/assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
                             </div>
                             <div class="step-arrow-nav mb-4">
 
@@ -52,7 +52,7 @@
                                         <button class="nav-link done" id="steparrow-gen-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-gen-info" type="button" role="tab" aria-controls="steparrow-gen-info" aria-selected="true">General</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
-                                        <button class="nav-link active" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Description</button>
+                                        <button class="nav-link" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Description</button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">Finish</button>
