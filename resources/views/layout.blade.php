@@ -1098,9 +1098,8 @@
                            </ul>
                         </div>
                      </li>
-                    
-                    
-                     <li class="menu-title">
+                   
+                     <li class="nav-item">
                         <a class="nav-link menu-link" href="widgets.html">
                         <i class="bx bx-aperture"></i> <span data-key="t-widgets">Widgets</span>
                         </a>
