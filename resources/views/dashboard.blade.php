@@ -1,14 +1,13 @@
-
-@extends('layout')
-@section('link')
-   <link href="{{asset('public/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
-   <script src="{{asset('public/assets/js/layout.js')}}"></script>
-   <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-   <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-   <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-   <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
-   @endsection
-   @section('content')
+    @extends('layout')
+    @section('link')
+      <link href="{{asset('public/assets/libs/sweetalert2/sweetalert2.min.css')}}" rel="stylesheet" type="text/css" />
+      <script src="{{asset('public/assets/js/layout.js')}}"></script>
+      <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+      @endsection
+      @section('content')
          <div class="main-content">
             <div class="page-content">
                <div class="container-fluid">
@@ -33,11 +32,11 @@
                            <div class="card-body">
                               <h5 class="card-title mb-3">Developer Plan</h5>
                               <div class="progress animated-progress custom-progress mb-1">
-                                 <div class="progress-bar bg-info" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
+                                 <div class="progress-bar bg-secondary" role="progressbar" style="width: 38%" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100"></div>
                               </div>
                               <p class="text-muted mb-2">You used 215 of 2000 of your API</p>
                               <div class="text-end">
-                                 <button type="button" class="btn btn-success btn-sm create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal">Create API Key</button>
+                                 <button type="button" class="btn btn-primary btn-sm create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal">Create API Key</button>
                               </div>
                            </div>
                         </div>
@@ -48,8 +47,8 @@
                            <div class="card-body">
                               <div class="d-flex justify-content-between">
                                  <div>
-                                    <p class="fw-medium text-muted mb-0">Successful conversions</p>
-                                    <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="50"></span></h2>
+                                    <p class="fw-semibold text-muted mb-0">Successful conversions</p>
+                                    <h2 class="mt-4 ff-secondary fw-bold"><span class="counter-value" data-target="50"></span></h2>
                                     <p class="mb-0 text-muted"><span class="badge bg-light text-success mb-0"><i class="ri-arrow-up-line align-middle"></i> 8.24 % </span> 7 last week</p>
                                  </div>
                                  <div>
@@ -70,8 +69,8 @@
                            <div class="card-body">
                               <div class="d-flex justify-content-between">
                                  <div>
-                                    <p class="fw-medium text-muted mb-0">Failed conversions</p>
-                                    <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="8"></span></h2>
+                                    <p class="fw-semibold text-muted mb-0">Failed conversions</p>
+                                    <h2 class="mt-4 ff-secondary fw-bold"><span class="counter-value" data-target="8"></span></h2>
                                     <p class="mb-0 text-muted"><span class="badge bg-light text-danger mb-0"><i class="ri-arrow-down-line align-middle"></i> 25.87 % </span> 7 last week</p>
                                  </div>
                                  <div>
@@ -96,7 +95,7 @@
                               <h5 class="card-title flex-grow-1 mb-0">API Keys</h5>
                               <div class="d-flex gap-1 flex-wrap">
                                  <button class="btn btn-soft-danger" id="remove-actions" onClick="deleteMultiple()"><i class="ri-delete-bin-2-line"></i></button>
-                                 <button type="button" class="btn btn-success create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal"><i class="ri-add-line align-bottom me-1"></i> Add</button>
+                                 <button type="button" class="btn btn-primary create-btn" data-bs-toggle="modal" data-bs-target="#api-key-modal"><i class="ri-add-line align-bottom me-1"></i> Add API Key</button>
                               </div>
                            </div>
                            <div class="card-body">
@@ -259,17 +258,18 @@
                </div>
             </footer>
          </div>
-    @endsection
-    @section('script')
+      @endsection        
+      @section('script')
       <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
       <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
       <script src="{{asset('public/assets/js/plugins.js')}}"></script>
-      <script src="{{asset('public/assets/libs/list.js')}}/list.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/list.pagination.js')}}/list.pagination.min.js')}}"></script>
+      <script src="{{asset('public/assets/libs/list.js/list.min.js')}}"></script>
+      <script src="{{asset('public/assets/libs/list.pagination.js/list.pagination.min.js')}}"></script>
       <script src="{{asset('public/assets/libs/sweetalert2/sweetalert2.min.js')}}"></script>
       <script src="{{asset('public/assets/js/pages/api-key.init.js')}}"></script>
       <script src="{{asset('public/assets/js/app.js')}}"></script>
-    @endsection
+      @endsection
+ 
