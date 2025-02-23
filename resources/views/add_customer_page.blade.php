@@ -73,7 +73,7 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-Fathername-input">Father Name</label>
-                                                    <input type="Fathername" class="form-control" id="steparrow-gen-info-Fathername-input" name="father_name" placeholder="Enter Fathername" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-Fathername-input" name="father_name" placeholder="Enter Fathername" required >
                                                 </div>
                                             </div>
                                         </div>
