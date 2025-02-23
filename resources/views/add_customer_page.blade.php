@@ -74,7 +74,6 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-Fathername-input">Father Name</label>
                                                     <input type="Fathername" class="form-control" id="steparrow-gen-info-Fathername-input" name="father_name" placeholder="Enter Fathername" required >
-                                                    <div class="invalid-feedback">Please enter an father name</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -83,14 +82,12 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-mother-input">Mother Name</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-mother-input" name="mother_name" placeholder="Enter mother name" required >
-                                                    <div class="invalid-feedback">Please enter an mother name</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-email-input">Date of Birth</label>
                                                     <input type="date" class="form-control" id="steparrow-gen-info--input" name="dob" placeholder="Enter date of birth" required max="{{date('Y-m-d')}}">
-                                                    <div class="invalid-feedback">Please enter an DOB</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -99,14 +96,12 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-nominee-input">Nominee Name</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-nominee-input" name="nominee_name" placeholder="Enter nominee name" required >
-                                                    <div class="invalid-feedback">Please enter an nominee name</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-n_dob-input">Nominee BOB</label>
                                                     <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" name="nominee_dob" placeholder="Enter nominee dob" required >
-                                                    <div class="invalid-feedback">Please enter an nominee name</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -116,14 +111,12 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-phone-input">Phone</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-phone-input" name="phone" placeholder="Enter phone number" required >
-                                                    <div class="invalid-feedback">Please enter an phone number</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-email-input">Email</label>
                                                     <input type="email" class="form-control" id="steparrow-gen-info-email-input" name="email" placeholder="Enter email" required >
-                                                    <div class="invalid-feedback">Please enter an email address</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -132,14 +125,12 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-address-input">Address</label>
                                                     <textarea type="text" class="form-control" id="steparrow-gen-info-address-input" name="address" placeholder="Enter address" required ></textarea>
-                                                    <div class="invalid-feedback">Please enter an address</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-occupation-input">Occupation</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-occupation-input" name="occupation" placeholder="Enter occupation" required >
-                                                    <div class="invalid-feedback">Please enter an occupation</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -158,14 +149,12 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-bank-input">Bank Name</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-bank-input" name="bank_name" placeholder="Enter bank name" required >
-                                                    <div class="invalid-feedback">Please enter an bank name</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-ifdc-input">IFSC</label>
                                                     <input type="Fathername" class="form-control" id="steparrow-gen-info-ifdc-input" name="ifsc" placeholder="Enter ifdc" required >
-                                                    <div class="invalid-feedback">Please enter an ifdc code</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -174,7 +163,6 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-account-input">Account Number</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-account-input" name="account_num" placeholder="Enter account number" required >
-                                                    <div class="invalid-feedback">Please enter an account number</div>
                                                 </div>
                                             </div>
                                         
@@ -234,64 +222,61 @@
     <script src="{{ asset('public/assets/js/validation.js') }}"></script>
 
 <script>
-   $(document).ready(function () {
-    $("#addCustomer").validate({
+$(document).ready(function () {
+    var form = $("#addCustomer");
+
+    form.validate({
         rules: {
             username: { required: true },
-            father_name: { required: true },	
+            father_name: { required: true },
             mother_name: { required: true },
             dob: { required: true },
             nominee_name: { required: true },
             nominee_dob: { required: true },
-            phone: { required: true, digits: true, minlength: 10, maxlength: 10 },
+            phone: { required: true },
             email: { required: true, email: true },
             address: { required: true },
             occupation: { required: true },
             bank_name: { required: true },
-            ifsc: { required: true, minlength: 11, maxlength: 11 },
-            account_num: { required: true, digits: true }
+            ifsc: { required: true },
+            account_num: { required: true }
         },
         messages: {
             username: "Please enter a username",
-            father_name: "Please enter father name",
-            mother_name: "Please enter mother name",
-            dob: "Please enter your date of birth",
-            nominee_name: "Please enter nominee name",
-            nominee_dob: "Please enter nominee date of birth",
-            phone: {
-                required: "Please enter phone number",
-                digits: "Only digits are allowed",
-                minlength: "Phone number must be 10 digits",
-                maxlength: "Phone number must be 10 digits"
-            },
-            email: {
-                required: "Please enter an email",
-                email: "Please enter a valid email address"
-            },
-            address: "Please enter your address",
-            occupation: "Please enter your occupation",
-            bank_name: "Please enter bank name",
-            ifsc: {
-                required: "Please enter IFSC code",
-                minlength: "IFSC must be 11 characters",
-                maxlength: "IFSC must be 11 characters"
-            },
-            account_num: {
-                required: "Please enter account number",
-                digits: "Only digits are allowed"
-            }
-        },
-        submitHandler: function (form) {
-            // Perform AJAX submission or other actions
-            alert("Form submitted successfully!");
-            form.submit();
+            father_name: "Please enter a father name",
+            mother_name: "Please enter a mother name",
+            dob: "Please enter a valid date of birth",
+            nominee_name: "Please enter a nominee name",
+            nominee_dob: "Please enter a nominee date of birth",
+            phone: "Please enter a phone number",
+            email: "Please enter a valid email",
+            address: "Please enter an address",
+            occupation: "Please enter an occupation",
+            bank_name: "Please enter a bank name",
+            ifsc: "Please enter a valid IFSC code",
+            account_num: "Please enter an account number"
+        }
+    });
+
+    $(".nexttab").click(function () {
+        if (form.valid()) {
+            var nextTab = $(this).attr("data-nexttab");
+            $("#" + nextTab).click();
+        }
+    });
+
+    $(".previestab").click(function () {
+        var prevTab = $(this).attr("data-previous");
+        $("#" + prevTab).click();
+    });
+
+    $("#addCustomer").on("submit", function (e) {
+        e.preventDefault();
+        if (form.valid()) {
+            customerSubmit();
         }
     });
 });
-
-function customerSubmit() {
-    $("#addCustomer").submit();
-}
 
 </script>
 
