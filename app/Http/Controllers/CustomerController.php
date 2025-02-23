@@ -22,7 +22,7 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validation([
+        $request->validate([
             'username'	        => 'required',
             'father_name'       => 'required',	
             'mother_name'	    => 'required',
