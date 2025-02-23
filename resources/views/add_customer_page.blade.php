@@ -183,7 +183,7 @@
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
                                         <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-gen-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to General</button>
-                                        <button type="submit" class="btn btn-success btn-label right ms-auto nexttab nexttab" onclick="customerSubmit()"data-nexttab="pills-experience-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</button>
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" onclick="customerSubmit()"data-nexttab="pills-experience-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Submit</button>
                                     </div>
                                 </div>
                                 <!-- end tab pane -->
