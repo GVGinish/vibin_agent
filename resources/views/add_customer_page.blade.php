@@ -258,6 +258,9 @@ $(document).ready(function () {
         }
     });
 
+    // Set max date for DOB
+    $("#steparrow-gen-info--input").attr("max", new Date().toISOString().split("T")[0]);
+
     // Prevent next tab switch if validation fails
     $(".nexttab").click(function () {
         if (form.valid()) {
@@ -278,7 +281,7 @@ $(document).ready(function () {
 
         if (form.valid()) {
             $.ajax({
-                url: "{{route('add_customer')}}", // Replace with your Laravel route
+                url: "{{ route('add_customer') }}", // Laravel Route
                 type: "POST",
                 data: form.serialize(),
                 dataType: "json",
@@ -307,6 +310,7 @@ $(document).ready(function () {
         }
     });
 });
+
 
 </script>
 
