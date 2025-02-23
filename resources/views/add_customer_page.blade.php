@@ -154,7 +154,7 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-ifdc-input">IFSC</label>
-                                                    <input type="Fathername" class="form-control" id="steparrow-gen-info-ifdc-input" name="ifsc" placeholder="Enter ifdc" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-ifdc-input" name="ifsc" placeholder="Enter ifdc" required >
                                                 </div>
                                             </div>
                                         </div>
