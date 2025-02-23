@@ -39,7 +39,7 @@ class CustomerController extends Controller
         ]);
 
         $store = new CustomerModel();
-
+        $store->user_id = 1; 
         $store->username = $request->username; 
         $store->father_name = $request->father_name;  
         $store->mother_name = $request->mother_name;  
