@@ -238,27 +238,40 @@
    function customerSubmit() {
       var form = $("#addCustomer");
       form.validate({
+      
+
           rules: {
-              dimension: { required: true },
-              product_type: { required: true },
-              price: { required: true, number: true ,min:1 },
-              quantity: { required: true, number: true },
-              quality: { required: true },
-              color: { required: true },
-              type: { required: true },
+            username:{required},
+            father_name:{required},	
+            mother_name:{required},
+            dob:{required},
+            nominee_name:{required},
+            nominee_dob:{required},
+            phone:{required},
+            email:{required},
+            address:{required},
+            occupation:{required},
+            bank_name:{required},
+            ifsc:{required},
+            account_num:{required},
 
           },
           messages: {
-              dimension: { required: "Please fill dimension" },
-              product_type: { required: "Please select product type" },
-              price: { required: "Please fill price", number: "Only numeric value" },
-              quantity: { required: "Please fill quantity", number: "Only numeric value" },
-              quality: { required: "Please select quality" },
-              color: { required: "Please select color" },
-              type: { required: "Please select type" },
-
+              username: { required: "Please fill username" },
+              father_name: { required: "Please fill father name" },
+              mother_name: { required: "Please fill mother name" },
+              dob: { required: "Please fill date of birth" },
+              nominee_name: { required: "Please fill nominee name" },
+              nominee_dob: { required: "Please fill nominee dob" },
+              phone: { required: "Please fill nominee phone" },
+              email: { required: "Please fill email" },
+              address: { required: "Please fill address" },
+              occupation: { required: "Please fill occupation" },
+              bank_name: { required: "Please fill bank name" },
+              ifsc: { required: "Please fill ifsc" },
+              account_num: { required: "Please fill account number" },        
    
-          },
+          }, 
       
       });
    
