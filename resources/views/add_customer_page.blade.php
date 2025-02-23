@@ -278,7 +278,7 @@ $(document).ready(function () {
 
         if (form.valid()) {
             $.ajax({
-                url: "/add_customer", // Replace with your Laravel route
+                url: "{{route('add_customer')}}", // Replace with your Laravel route
                 type: "POST",
                 data: form.serialize(),
                 dataType: "json",
