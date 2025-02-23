@@ -14,7 +14,28 @@
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
+      <style>
+         .error{
+            color:red;
+         }
+         .toast-success {
+            background-color: #4CAF50 !important;
+            color: #fff; /* Optional: Set text color to white for contrast */
+         }
 
+         .toast-error {
+            background-color: red !important;
+            color: #fff; /* Optional: Set text color to white for contrast */
+         }
+
+         .toast-warning {
+            background-color: red !important;
+            color: orange; /* Optional: Set text color to white for contrast */
+         }
+
+         
+
+         </style>
 
       <!-- Layout config Js -->
       @yield('link')
@@ -1498,9 +1519,12 @@
             </div>
          </div>
       </div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  
+
       <!-- JAVASCRIPT -->
      @yield('script')
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
    </body>
 </html>
