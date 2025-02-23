@@ -68,7 +68,6 @@
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
                                                     <input type="text" class="form-control" id="steparrow-gen-info-username-input" name="username" placeholder="Enter user name" required >
-                                                    <div class="invalid-feedback">Please enter an user name</div>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
