@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CustomerModel;
+use Illimunate\Facades\Support\Log;
 
 class CustomerController extends Controller
 {
@@ -22,6 +23,7 @@ class CustomerController extends Controller
      */
     public function store(Request $request)
     {
+        Log::info('wewerwe');
         $request->validate([
             'username'	        => 'required',
             'father_name'       => 'required',	
