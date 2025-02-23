@@ -234,81 +234,65 @@
     <script src="{{ asset('public/assets/js/validation.js') }}"></script>
 
 <script>
-   function customerSubmit() {
-      var form = $("#addCustomer");
-      form.validate({
-      
+   $(document).ready(function () {
+    $("#addCustomer").validate({
+        rules: {
+            username: { required: true },
+            father_name: { required: true },	
+            mother_name: { required: true },
+            dob: { required: true },
+            nominee_name: { required: true },
+            nominee_dob: { required: true },
+            phone: { required: true, digits: true, minlength: 10, maxlength: 10 },
+            email: { required: true, email: true },
+            address: { required: true },
+            occupation: { required: true },
+            bank_name: { required: true },
+            ifsc: { required: true, minlength: 11, maxlength: 11 },
+            account_num: { required: true, digits: true }
+        },
+        messages: {
+            username: "Please enter a username",
+            father_name: "Please enter father name",
+            mother_name: "Please enter mother name",
+            dob: "Please enter your date of birth",
+            nominee_name: "Please enter nominee name",
+            nominee_dob: "Please enter nominee date of birth",
+            phone: {
+                required: "Please enter phone number",
+                digits: "Only digits are allowed",
+                minlength: "Phone number must be 10 digits",
+                maxlength: "Phone number must be 10 digits"
+            },
+            email: {
+                required: "Please enter an email",
+                email: "Please enter a valid email address"
+            },
+            address: "Please enter your address",
+            occupation: "Please enter your occupation",
+            bank_name: "Please enter bank name",
+            ifsc: {
+                required: "Please enter IFSC code",
+                minlength: "IFSC must be 11 characters",
+                maxlength: "IFSC must be 11 characters"
+            },
+            account_num: {
+                required: "Please enter account number",
+                digits: "Only digits are allowed"
+            }
+        },
+        submitHandler: function (form) {
+            // Perform AJAX submission or other actions
+            alert("Form submitted successfully!");
+            form.submit();
+        }
+    });
+});
 
-          rules: {
-            username:{required},
-            father_name:{required},	
-            mother_name:{required},
-            dob:{required},
-            nominee_name:{required},
-            nominee_dob:{required},
-            phone:{required},
-            email:{required},
-            address:{required},
-            occupation:{required},
-            bank_name:{required},
-            ifsc:{required},
-            account_num:{required},
+function customerSubmit() {
+    $("#addCustomer").submit();
+}
 
-          },
-          messages: {
-              username: { required: "Please fill username" },
-              father_name: { required: "Please fill father name" },
-              mother_name: { required: "Please fill mother name" },
-              dob: { required: "Please fill date of birth" },
-              nominee_name: { required: "Please fill nominee name" },
-              nominee_dob: { required: "Please fill nominee dob" },
-              phone: { required: "Please fill nominee phone" },
-              email: { required: "Please fill email" },
-              address: { required: "Please fill address" },
-              occupation: { required: "Please fill occupation" },
-              bank_name: { required: "Please fill bank name" },
-              ifsc: { required: "Please fill ifsc" },
-              account_num: { required: "Please fill account number" },        
-   
-          }, 
-      
-      });
-   
-   
-   
-      if (form.valid()) {
-          var formData = new FormData(form[0]);
-   
-          $.ajax({
-              url: "{{route('add_customer')}}",
-              type: "POST",
-              data: formData,
-              processData: false,
-              contentType: false,
-              headers: { 'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content') },
-              success: function(response) {
-                  if (response.status === "success") {
-                      form[0].reset();
-                      $('#image-preview').empty();
-                      toastr.success(response.message);
-                       setTimeout(() => window.location.reload(), 1000);
-                  } else if(response.status === "exists") {
-                     toastr.warning(response.message);
-
-                  }else{
-                     toastr.error(response.message);
-
-                  }
-              },
-              error: function(xhr) {
-                  $(".error_responseproduct").html(
-                      "An error occurred: " + xhr.responseJSON.message
-                  );
-              }
-          });
-      }
-   }
-   
 </script>
 
     @endsection
