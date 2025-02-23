@@ -258,6 +258,7 @@ $(document).ready(function () {
         }
     });
 
+    // Prevent next tab switch if validation fails
     $(".nexttab").click(function () {
         if (form.valid()) {
             var nextTab = $(this).attr("data-nexttab");
@@ -265,15 +266,44 @@ $(document).ready(function () {
         }
     });
 
+    // Switch to the previous tab
     $(".previestab").click(function () {
         var prevTab = $(this).attr("data-previous");
         $("#" + prevTab).click();
     });
 
+    // AJAX Form Submission with CSRF Token
     $("#addCustomer").on("submit", function (e) {
         e.preventDefault();
+
         if (form.valid()) {
-            customerSubmit();
+            $.ajax({
+                url: "/add_customer", // Replace with your Laravel route
+                type: "POST",
+                data: form.serialize(),
+                dataType: "json",
+                headers: {
+                    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content")
+                },
+                beforeSend: function () {
+                    $(".submitBtn").prop("disabled", true).text("Submitting...");
+                },
+                success: function (response) {
+                    if (response.status === "success") {
+                        alert("Customer added successfully!");
+                        form[0].reset(); // Reset form after successful submission
+                    } else {
+                        alert("Error: " + response.message);
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.log("AJAX Error: ", error);
+                    alert("Something went wrong. Please try again.");
+                },
+                complete: function () {
+                    $(".submitBtn").prop("disabled", false).text("Submit");
+                }
+            });
         }
     });
 });
