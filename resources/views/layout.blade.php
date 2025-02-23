@@ -10,6 +10,11 @@
       <!-- App favicon -->
       <link rel="shortcut icon" href="assets/images/favicon.ico">
       <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+      <meta name="csrf-token" content="{{ csrf_token() }}">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
 
       <!-- Layout config Js -->
       @yield('link')
@@ -745,7 +750,7 @@
                         </a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link menu-link" href="{{route('add_policy_page')}}">
+                        <a class="nav-link menu-link" href="{{route('add_customer_page')}}">
                         <i class="bx bx-layout"></i> <span data-key="t-widgets">Add Policy</span>
                         </a>
                      </li>
@@ -1493,6 +1498,8 @@
             </div>
          </div>
       </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <!-- JAVASCRIPT -->
      @yield('script')
    </body>

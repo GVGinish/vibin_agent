@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PolicyController;
+use App\Http\Controllers\CustomerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -28,7 +28,9 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/add_policy_page', [PolicyController::class, 'add_policy_page'])->name('add_policy_page');
+    Route::get('/add_customer_page', [CustomerController::class, 'index'])->name('add_customer_page');
+    Route::post('/add_customer', [CustomerController::class, 'store'])->name('add_customer');
+
 
 
 
