@@ -280,6 +280,7 @@ $(document).ready(function () {
         e.preventDefault();
 
         if (form.valid()) {
+            
             $.ajax({
                 url: "{{ route('add_customer') }}", // Laravel Route
                 type: "POST",
@@ -292,6 +293,7 @@ $(document).ready(function () {
                     $(".submitBtn").prop("disabled", true).text("Submitting...");
                 },
                 success: function (response) {
+                    alert('d');
                     if (response.status === "success") {
                         alert("Customer added successfully!");
                         form[0].reset(); // Reset form after successful submission
