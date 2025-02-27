@@ -293,7 +293,9 @@ $(document).ready(function () {
                 },
                 error: function (xhr) {
                     console.log(xhr.responseText);
-                    alert("An error occurred. Please try again.");
+                    
+                    toastr.error("An error occurred. Please try again.");
+
                     $(".nexttab").prop("disabled", false).text("Submit");
                 }
             });
