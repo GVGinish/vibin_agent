@@ -283,10 +283,11 @@ $(document).ready(function () {
                 },
                 success: function (response) {
                     if (response.status === "success") {
-                        alert("Customer added successfully!");
-                        form[0].reset(); // Reset form
+                        toastr.success("Customer added successfully");
+                        setTimeout(() => window.location.reload(), 1000);
                     } else {
-                        alert("Error: " + response.message);
+                        toastr.error(response.message);
+
                     }
                     $(".nexttab").prop("disabled", false).text("Submit");
                 },
