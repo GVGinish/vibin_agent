@@ -1,10 +1,10 @@
 @extends('layout')
 @section('link')
-    <script src="{{asset('assets/js/layout.js')}}"></script>
-    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('public/assets/js/layout.js')}}"></script>
+    <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
     @endsection
   
   @section('content')
@@ -48,8 +48,8 @@
 
 <form class="form-steps" autocomplete="off" id="addCustomer">
                             <div class="text-center pt-3 pb-4 mb-1 d-flex justify-content-center">
-                                <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                                <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
+                                <img src="{{asset('public/assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                                <img src="{{asset('public/assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
                             </div>
                             <div class="step-arrow-nav mb-4">
 
@@ -275,17 +275,17 @@
        @section('script')
   
     <!-- JAVASCRIPT -->
-    <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
-    <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
-    <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
-    <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
-    <script src="{{asset('assets/js/plugins.js')}}"></script>
+    <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
+    <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
+    <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+    <script src="{{asset('public/assets/js/plugins.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="{{asset('assets/js/pages/form-wizard.init.js')}}"></script>
-    <script src="{{asset('assets/js/app.js')}}"></script>
+    <script src="{{asset('public/assets/js/pages/form-wizard.init.js')}}"></script>
+    <script src="{{asset('public/assets/js/app.js')}}"></script>
 
-    <script src="{{ asset('assets/js/validation.js') }}"></script>
+    <script src="{{ asset('public/assets/js/validation.js') }}"></script>
     <script>
 $(document).ready(function () {
     var form = $("#addCustomer");
