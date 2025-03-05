@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\CustomerModel;
+use App\Models\PolicyModel;
+
 
 class CustomerController extends Controller
 {
@@ -38,8 +40,12 @@ class CustomerController extends Controller
             'account_num'       => 'required',
         ]);
 
+        $lastProduct = CustomerModel::orderBy('customer_id', 'desc')->first();
+        $lastId = $lastProduct ? (int) str_replace('CUST', '', $lastProduct->customer_id) : 0;
+        $rid = 'CUST' . str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+
         $store = new CustomerModel();
-        $store->user_id = 1; 
+        $store->customer_id = $rid; 
         $store->username = $request->username; 
         $store->father_name = $request->father_name;  
         $store->mother_name = $request->mother_name;  
@@ -52,29 +58,34 @@ class CustomerController extends Controller
         $store->occupation = $request->occupation;  
         $store->bank_name = $request->bank_name;
         $store->ifsc = $request->ifsc;  
-        $store->account_num = $request->account_num; 
+        $store->account_num = $request->account_num;
         
-        if($store->save()){
+        $lastPolicy = PolicyModel::orderBy('policy_id', 'desc')->first();
+        $policyId = $lastPolicy ? (int) str_replace('PLY', '', $lastPolicy->policy_id) : 0;
+        $rid1 = 'PLY' . str_pad($policyId + 1, 3, '0', STR_PAD_LEFT);
+
+        $policy = new PolicyModel();
+        $policy->customer_id = $rid;
+        $policy->policy_id = $rid1;
+        $policy->policy_type = $request->policy_type;
+        $policy->premium_amount = $request->premium_amount;
+        $policy->tenure = $request->tenure;
+        $policy->maturity_amount = $request->maturity_amount;        
+        
+        if($store->save() && $policy->save()){
             return response()->json(['status'=>'success','message'=>'Policy addes successfully']);
         }else{
             return response()->json(['status'=>'error','message'=>'Please check the data']);
 
         }
-
-        
-
-
-
-
-
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        return view('personal_detail');
     }
 
     /**

@@ -30,6 +30,8 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/add_customer_page', [CustomerController::class, 'index'])->name('add_customer_page');
     Route::post('/add_customer', [CustomerController::class, 'store'])->name('add_customer');
+    Route::get('/personal_detail', [CustomerController::class, 'show'])->name('personal_detail');
+
 
 
 

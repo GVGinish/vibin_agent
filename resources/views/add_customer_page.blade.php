@@ -1,10 +1,10 @@
 @extends('layout')
 @section('link')
-    <script src="{{asset('public/assets/js/layout.js')}}"></script>
-    <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('assets/js/layout.js')}}"></script>
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
     @endsection
   
   @section('content')
@@ -48,8 +48,8 @@
 
 <form class="form-steps" autocomplete="off" id="addCustomer">
                             <div class="text-center pt-3 pb-4 mb-1 d-flex justify-content-center">
-                                <img src="{{asset('public/assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                                <img src="{{asset('public/assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
+                                <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                                <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
                             </div>
                             <div class="step-arrow-nav mb-4">
 
@@ -59,6 +59,9 @@
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="steparrow-description-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-description-info" type="button" role="tab" aria-controls="steparrow-description-info" aria-selected="false">Bank Details</button>
+                                    </li>
+                                    <li class="nav-item" role="presentation">
+                                        <button class="nav-link" id="steparrow-policy-info-tab" data-bs-toggle="pill" data-bs-target="#steparrow-policy-info" type="button" role="tab" aria-controls="steparrow-policy-info" aria-selected="false">Add Policy </button>
                                     </li>
                                     <li class="nav-item" role="presentation">
                                         <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false">Finish</button>
@@ -107,7 +110,7 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-n_dob-input">Nominee BOB</label>
-                                                    <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" name="nominee_dob" placeholder="Enter nominee dob" required >
+                                                    <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" name="nominee_dob" placeholder="Enter nominee dob" required max="{{date('Y-m-d')}}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -143,7 +146,7 @@
                                       
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to more info</button>
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-description-info-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Bank</button>
                                     </div>
                                 </div>
                                 <!-- end tab pane -->
@@ -160,7 +163,9 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-ifdc-input">IFSC</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-ifdc-input" name="ifsc" placeholder="Enter ifdc" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-ifsc-input" name="ifsc" 
+                                                        placeholder="Enter IFSC" required  
+                                                        title="Enter a valid IFSC code" oninput="this.value = this.value.toUpperCase();">
                                                 </div>
                                             </div>
                                         </div>
@@ -175,13 +180,66 @@
                                         </div>
                                     </div>
                                     <div class="d-flex align-items-start gap-3 mt-4">
-                                        <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-gen-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to General</button>
+                                    <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-gen-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to General</button>
+
+                                        <button type="button" class="btn btn-success btn-label right ms-auto nexttab nexttab" data-nexttab="steparrow-policy-info-tab"><i class="ri-arrow-right-line label-icon align-middle fs-16 ms-2"></i>Go to Policy</button>
+                                    </div>
+                                                </div>
+                                <!-- end tab pane -->
+
+
+
+                                <div class="tab-pane fade" id="steparrow-policy-info" role="tabpanel" aria-labelledby="steparrow-policy-info-tab">
+                                    <div>
+                                    <div class="row">
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-bank-input">Policy Type</label>
+                                                    <select type="text" class="form-control" id="steparrow-gen-info-polict-input" name="policy_type"  required >
+                                                    <option selected disabled>Select Policy Type</option> 
+                                                    <option value="Monthly">Monthly</option> 
+                                                      <option value="Quarterly">Quarterly</option>    
+                                                      <option value="Half Yearly">Half Yearly</option>    
+                                                      <option value="Yearly">Yearly</option>    
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-Premium-input">Premium Amount</label>
+                                                    <input type="text" class="form-control"  id="premium_amount" name="premium_amount" placeholder="Enter Premium Amount" required >
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                        <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-Tenure-input">Tenure</label>
+                                                    <input type="text" class="form-control"  name="tenure" id="tenure" placeholder="Enter Tenure" required >
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="steparrow-gen-info-Maturity-input">Maturity Amount</label>
+                                                    <input type="text" class="form-control"  id="maturity_amount" name="maturity_amount" placeholder="Enter Maturity Amount" required readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex align-items-start gap-3 mt-4">
+                                        <button type="button" class="btn btn-light btn-label previestab" data-previous="steparrow-description-info-tab"><i class="ri-arrow-left-line label-icon align-middle fs-16 me-2"></i> Back to Bank</button>
                                         <button type="submit" class="btn btn-success btn-label right ms-auto">
                     <i class="ri-check-line label-icon align-middle fs-16 ms-2"></i> Submit
                 </button>
                                                 </div>
                                 </div>
-                                <!-- end tab pane -->
+
+
+
+
+
+
+
 
                                 <div class="tab-pane fade" id="pills-experience" role="tabpanel">
                                     <div class="text-center">
@@ -217,17 +275,17 @@
        @section('script')
   
     <!-- JAVASCRIPT -->
-    <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
-    <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
-    <script src="{{asset('public/assets/js/plugins.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
+    <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="{{asset('public/assets/js/pages/form-wizard.init.js')}}"></script>
-    <script src="{{asset('public/assets/js/app.js')}}"></script>
+    <script src="{{asset('assets/js/pages/form-wizard.init.js')}}"></script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 
-    <script src="{{ asset('public/assets/js/validation.js') }}"></script>
+    <script src="{{ asset('assets/js/validation.js') }}"></script>
     <script>
 $(document).ready(function () {
     var form = $("#addCustomer");
@@ -245,8 +303,14 @@ $(document).ready(function () {
             address: { required: true },
             occupation: { required: true },
             bank_name: { required: true },
-            ifsc: { required: true },
-            account_num: { required: true, digits: true }
+            ifsc: { required: true ,minlength:11,maxlength:11},
+            account_num: { required: true, digits: true,minlength:11,maxlength:18},
+            policy_type: { required: true},
+            premium_amount: { required: true ,digits:true, min:1 },
+            tenure: { required: true ,digits:true , min:1 },
+            maturity_amount: { required: true ,digits:true, min:1 }
+
+
         },
         messages: {
             username: "Please enter a username",
@@ -261,7 +325,12 @@ $(document).ready(function () {
             occupation: "Please enter an occupation",
             bank_name: "Please enter a bank name",
             ifsc: "Please enter a valid IFSC code",
-            account_num: "Please enter an account number"
+            account_num: "Please enter an account number",
+            policy_type: "Please select policy type",
+            premium_amount: "Please enter an premium amount",
+            tenure: "Please enter an tenure",
+            maturity_amount: "Please enter an maturity amount",
+
         }
     });
 
@@ -303,5 +372,20 @@ $(document).ready(function () {
     });
 });
 </script>
+<script>
+    $(document).on('input', '#tenure', function() {
+        var premium_amount = parseFloat($('#premium_amount').val()) || 0;
+        var tenure = parseFloat($(this).val()) || 0;
+
+        // Ensure premium_amount is not empty before calculating
+        if (premium_amount > 0) {
+            var maturity_amount = premium_amount * tenure;
+            $('#maturity_amount').val(maturity_amount);
+        } else {
+            $('#maturity_amount').val(''); // Clear result if premium_amount is empty
+        }
+    });
+</script>
+
 
     @endsection

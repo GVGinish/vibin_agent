@@ -36,72 +36,9 @@
                   </div>
                   <!-- end page title -->
                   <div class="row">
-                     <div class="col-xl-9">
                         <div class="row">
-                           <div class="col-lg-3">
-                              <div class="card">
-                                 <div class="card-body d-flex gap-3 align-items-center">
-                                    <div class="avatar-sm">
-                                       <div class="avatar-title border bg-success-subtle border-success border-opacity-25 rounded-2 fs-17">
-                                          <i data-feather="users" class="icon-dual-success"></i>
-                                       </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                       <h5 class="fs-15">17.6k</h5>
-                                       <p class="mb-0 text-muted">Followers</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!--end col-->
-                           <div class="col-lg-3">
-                              <div class="card">
-                                 <div class="card-body d-flex gap-3 align-items-center">
-                                    <div class="avatar-sm">
-                                       <div class="avatar-title border bg-warning-subtle border-warning border-opacity-25 rounded-2 fs-17">
-                                          <i data-feather="file-text" class="icon-dual-warning"></i>
-                                       </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                       <h5 class="fs-15">149</h5>
-                                       <p class="mb-0 text-muted">Total Post</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!--end col-->
-                           <div class="col-lg-3">
-                              <div class="card">
-                                 <div class="card-body d-flex gap-3 align-items-center">
-                                    <div class="avatar-sm">
-                                       <div class="avatar-title border bg-danger-subtle border-danger border-opacity-25 rounded-2 fs-17">
-                                          <i data-feather="heart" class="icon-dual-danger"></i>
-                                       </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                       <h5 class="fs-15">24.8k</h5>
-                                       <p class="mb-0 text-muted">Likes</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!--end col-->
-                           <div class="col-lg-3">
-                              <div class="card">
-                                 <div class="card-body d-flex gap-3 align-items-center">
-                                    <div class="avatar-sm">
-                                       <div class="avatar-title border bg-primary-subtle border-primary border-opacity-25 rounded-2 fs-17">
-                                          <i data-feather="bar-chart" class="icon-dual-primary"></i>
-                                       </div>
-                                    </div>
-                                    <div class="flex-grow-1">
-                                       <h5 class="fs-15">54.3k</h5>
-                                       <p class="mb-0 text-muted">Views</p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                           <!--end col-->
+                         
+                         
                            <div class="col-lg-12">
                            <div class="card">
                            <div class="card-body">
@@ -140,9 +77,8 @@
                                                       <th>Name</th>
                                                       <th>Policy ID</th>
                                                       <th>Premium Amount</th>
-                                                      <th>Tenure</th>
-                                                      <th>Maturity Amount</th>
-                                                      <th>Add Policy</th>
+                                                      <th>Premium Term</th>
+                                                      <th>Maturity Term</th>
                                                    </tr>
                                              </thead>
                                              <tbody>
@@ -156,7 +92,7 @@
                                                       <td>{{$mon->premium_amount}}</td>
                                                       <td>{{$mon->tenure}}</td>
                                                       <td>{{$mon->maturity_amount}}</td>
-                                                      <td><a href=""class="btn btn-sm btn-primary">Add new policy</a></td>
+                                                      
                                                    </tr>
                                                  @endforeach  
                                                 </tbody>
@@ -174,9 +110,9 @@
                                                       <th>Name</th>
                                                       <th>Policy ID</th>
                                                       <th>Premium Amount</th>
-                                                      <th>Tenure</th>
-                                                      <th>Maturity Amount</th>
-                                                      <th>Add Policy</th>
+                                                      <th>Premium Term</th>
+                                                      <th>Maturity Term</th>
+                                                      
                                                    </tr>
                                              </thead>
                                              <tbody>
@@ -190,7 +126,7 @@
                                                       <td>{{$Qua->premium_amount}}</td>
                                                       <td>{{$Qua->tenure}}</td>
                                                       <td>{{$Qua->maturity_amount}}</td>
-                                                      <td><a href=""class="btn btn-sm btn-primary">Add new policy</a></td>
+                                                      
                                                    </tr>
                                                  @endforeach  
                                                 </tbody>                                                    
@@ -208,9 +144,9 @@
                                                       <th>Name</th>
                                                       <th>Policy ID</th>
                                                       <th>Premium Amount</th>
-                                                      <th>Tenure</th>
-                                                      <th>Maturity Amount</th>
-                                                      <th>Add Policy</th>
+                                                      <th>Premium Term</th>
+                                                      <th>Maturity Term</th>
+                                                      
                                                    </tr>
                                              </thead>
                                              <tbody>
@@ -224,7 +160,7 @@
                                                       <td>{{$half->premium_amount}}</td>
                                                       <td>{{$half->tenure}}</td>
                                                       <td>{{$half->maturity_amount}}</td>
-                                                      <td><a href=""class="btn btn-sm btn-primary">Add new policy</a></td>
+                                                      
                                                    </tr>
                                                  @endforeach  
                                                 </tbody>
@@ -242,9 +178,9 @@
                                                       <th>Name</th>
                                                       <th>Policy ID</th>
                                                       <th>Premium Amount</th>
-                                                      <th>Tenure</th>
-                                                      <th>Maturity Amount</th>
-                                                      <th>Add Policy</th>
+                                                      <th>Premium Term</th>
+                                                      <th>Maturity Term</th>
+                                                      
                                                    </tr>
                                              </thead>
                                              <tbody>
@@ -258,7 +194,7 @@
                                                       <td>{{$Year->premium_amount}}</td>
                                                       <td>{{$Year->tenure}}</td>
                                                       <td>{{$Year->maturity_amount}}</td>
-                                                      <td><a href=""class="btn btn-sm btn-primary">Add new policy</a></td>
+                                                      
                                                    </tr>
                                                  @endforeach  
                                                 </tbody>
@@ -270,79 +206,13 @@
                            </div>
                            <!-- end card-body -->
                         </div>
-                           </div>
+                         
                           
                         </div>
                         <!--end row-->
                      </div>
                      <!--end col-->
-                     <div class="col-xl-3">
-                        <div class="card">
-                           <div class="card-header align-items-center d-flex">
-                              <h4 class="card-title mb-0 flex-grow-1">Recent Comment</h4>
-                              <div class="flex-shrink-0">
-                                 <button type="button" class="btn btn-soft-primary btn-sm">
-                                 View All
-                                 </button>
-                              </div>
-                           </div>
-                           <div class="card-body">
-                              <div data-simplebar class="mx-n3 px-3" style="height: 375px;">
-                                 <div class="vstack gap-3">
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-3.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Diana Kohler <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Really well-written and informative. The emotional connection strategy is something I’ll be testing out more! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-5.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Tonya Noble <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Incredibly helpful tips, especially about adding a call to action. I’ve been missing that step and will implement it in my next post! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-6.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Donald Palmer <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-7.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Joseph Parker <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Great post! Simple yet powerful tips that I can start using immediately. Thanks for sharing your expertise! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-9.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Timothy Smith <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Wow, this has opened my eyes to a new perspective on creating content. Emotional triggers—such a smart way to engage users! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-10.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Alexis Clarke <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Fantastic read! The power of visuals and trends really stood out to me. Thanks for sharing these useful insights! "</p>
-                                       </div>
-                                    </div>
-                                    <div class="d-flex gap-3">
-                                       <img src="{{asset('assets/images/users/avatar-2.jpg')}}" alt="" class="avatar-sm rounded flex-shrink-0">
-                                       <div class="flex-shrink-1">
-                                          <h6 class="mb-2">Thomas Taylor <span class="text-muted">Has commented</span></h6>
-                                          <p class="text-muted mb-0">" Loved the section on visual storytelling. It’s true that images speak louder on social media platforms. More visuals in my next posts for sure! "</p>
-                                       </div>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
+                 
                  
                      <!--end col-->
                   </div>
@@ -392,12 +262,5 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
       <script src="{{asset('assets/js/pages/datatables.init.js')}}"></script>
       <script src="{{asset('assets/js/app.js')}}"></script>
-      <script>
-         $(document).ready(function() {
-            $('#buttons-datatables-1').DataTable();
-            $('#buttons-datatables-2').DataTable();
-            $('#buttons-datatables-3').DataTable();
-            $('#buttons-datatables-4').DataTable();
-         });
-         </script>
+  
       @endsection
