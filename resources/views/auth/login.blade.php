@@ -8,17 +8,17 @@
       <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
       <meta content="Themesbrand" name="author" />
       <!-- App favicon -->
-      <link rel="shortcut icon" href="{{asset('public/assets/images/favicon.ico')}}">
+      <link rel="shortcut icon" href="{{asset('assets/images/favicon.ico')}}">
       <!-- Layout config Js -->
-      <script src="{{asset('public/assets/js/layout.js')}}"></script>
+      <script src="{{asset('assets/js/layout.js')}}"></script>
       <!-- Bootstrap Css -->
-      <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
       <!-- Icons Css -->
-      <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
       <!-- App Css-->
-      <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
       <!-- custom Css-->
-      <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+      <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
    </head>
    <body>
       <div class="auth-page-wrapper pt-5">
@@ -34,7 +34,7 @@
                      <div class="text-center mt-sm-5 mb-4 text-white-50">
                         <div>
                            <a href="index.html" class="d-inline-block auth-logo">
-                           <img src="{{asset('public/assets/images/logo-light.png')}}" alt="" height="20">
+                           <img src="{{asset('assets/images/logo-light.png')}}" alt="" height="20">
                            </a>
                         </div>
                      </div>
@@ -116,14 +116,14 @@
       </div>
       <!-- end auth-page-wrapper -->
       <!-- JAVASCRIPT -->
-      <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
-      <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
-      <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
-      <script src="{{asset('public/assets/js/plugins.js')}}"></script>
-      <script src="{{asset('public/assets/libs/particles.js')}}/particles.js')}}"></script>
-      <script src="{{asset('public/assets/js/pages/particles.app.js')}}"></script>
-      <script src="{{asset('public/assets/js/pages/password-addon.init.js')}}"></script>
+      <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+      <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
+      <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
+      <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
+      <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+      <script src="{{asset('assets/js/plugins.js')}}"></script>
+      <script src="{{asset('assets/libs/particles.js')}}/particles.js')}}"></script>
+      <script src="{{asset('assets/js/pages/particles.app.js')}}"></script>
+      <script src="{{asset('assets/js/pages/password-addon.init.js')}}"></script>
    </body>
 </html>

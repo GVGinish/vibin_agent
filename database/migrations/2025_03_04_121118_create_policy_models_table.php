@@ -14,11 +14,13 @@ return new class extends Migration
         Schema::create('policy_models', function (Blueprint $table) {
             $table->id();
             $table->string('customer_id', 50);
-            $table->string('policy_id', 50);
-            $table->string('policy_type', 50);
+            $table->string('policy_number')->index();
+            $table->string('policy_type', 50)->index();
             $table->decimal('premium_amount', 10, 2);
-            $table->integer('tenure');
-            $table->decimal('maturity_amount', 10, 2);    
+            $table->string('policy_name');
+            $table->integer('premium_term');
+            $table->integer('maturity_term');
+            $table->json('term_schedule');    
             $table->timestamps();
         });
     }
