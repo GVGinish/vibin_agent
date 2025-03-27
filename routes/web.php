@@ -30,13 +30,15 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/add_customer_page', [CustomerController::class, 'index'])->name('add_customer_page');
+    Route::get('/add_customer_page/{type}', [CustomerController::class, 'index'])->name('add_customer_page');
     Route::post('/add_customer', [CustomerController::class, 'store'])->name('add_customer');
     Route::get('/personal_detail', [CustomerController::class, 'show'])->name('personal_detail');
 
     Route::get('/policy_list/{id}', [PolicyController::class, 'show'])->name('policy_list');
     Route::get('/policy_schedule/{id}', [PolicyController::class, 'schedule'])->name('policy_schedule');
     Route::get('/pay/{id}', [PolicyController::class, 'update'])->name('pay');
+    Route::post('change_status',[PolicyController::class , 'change_status'])->name('change_status');
+
 
 
 

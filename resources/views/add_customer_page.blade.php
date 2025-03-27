@@ -1,10 +1,10 @@
 @extends('layout')
 @section('link')
-    <script src="{{asset('public/assets/js/layout.js')}}"></script>
-    <link href="{{asset('public/assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
-    <link href="{{asset('public/assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
+    <script src="{{asset('assets/js/layout.js')}}"></script>
+    <link href="{{asset('assets/css/bootstrap.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/icons.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/app.min.css')}}" rel="stylesheet" type="text/css" />
+    <link href="{{asset('assets/css/custom.min.css')}}" rel="stylesheet" type="text/css" />
     @endsection
   
   @section('content')
@@ -41,9 +41,10 @@
                     </div><!-- end card header -->
                     <div class="card-body">
                   <form class="form-steps" autocomplete="off" id="addCustomer">
+                    <input name="customer_id" value="{{(!empty($detail->customer_id)) ? $detail->customer_id : '' }}" type="text"readonly>
                             <div class="text-center pt-3 pb-4 mb-1 d-flex justify-content-center">
-                                <img src="{{asset('public/assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
-                                <img src="{{asset('public/assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
+                                <img src="{{asset('assets/images/logo-dark.png')}}" class="card-logo card-logo-dark" alt="logo dark" height="17">
+                                <img src="{{asset('assets/images/logo-light.png')}}" class="card-logo card-logo-light" alt="logo light" height="17">
                             </div>
                             <div class="step-arrow-nav mb-4">
 
@@ -70,13 +71,13 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-username-input">User Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-username-input" name="username" placeholder="Enter user name" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-username-input" name="username" value="{{!empty($detail->username) ? $detail->username : ''}}" placeholder="Enter user name" required >
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-Fathername-input">Father Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-Fathername-input" name="father_name" placeholder="Enter Fathername" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-Fathername-input" name="father_name" value="{{!empty($detail->father_name) ? $detail->father_name : ''}}" placeholder="Enter Fathername" required >
                                                 </div>
                                             </div>
                                         </div>
@@ -84,13 +85,13 @@
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-mother-input">Mother Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-mother-input" name="mother_name" placeholder="Enter mother name" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-mother-input" name="mother_name" value="{{!empty($detail->mother_name) ? $detail->mother_name : ''}}" placeholder="Enter mother name" required >
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-email-input">Date of Birth</label>
-                                                    <input type="date" class="form-control" id="steparrow-gen-info--input" name="dob" placeholder="Enter date of birth" required max="{{date('Y-m-d')}}">
+                                                    <input type="date" class="form-control" id="steparrow-gen-info--input" name="dob" placeholder="Enter date of birth" value="{{!empty($detail->dob) ? $detail->dob : ''}}" required max="{{date('Y-m-d')}}">
                                                 </div>
                                             </div>
                                         </div>
@@ -98,13 +99,13 @@
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-nominee-input">Nominee Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-nominee-input" name="nominee_name" placeholder="Enter nominee name" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-nominee-input" name="nominee_name" value="{{!empty($detail->nominee_name) ? $detail->nominee_name : ''}}" placeholder="Enter nominee name" required >
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-n_dob-input">Nominee BOB</label>
-                                                    <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" name="nominee_dob" placeholder="Enter nominee dob" required max="{{date('Y-m-d')}}" >
+                                                    <input type="date" class="form-control" id="steparrow-gen-info-n_dob-input" name="nominee_dob" placeholder="Enter nominee dob" value="{{!empty($detail->nominee_dob) ? $detail->nominee_dob : ''}}" required max="{{date('Y-m-d')}}" >
                                                 </div>
                                             </div>
                                         </div>
@@ -113,13 +114,13 @@
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-phone-input">Phone</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-phone-input" name="phone" placeholder="Enter phone number" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-phone-input" name="phone" placeholder="Enter phone number" value="{{!empty($detail->phone) ? $detail->phone : ''}}" required >
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-email-input">Email</label>
-                                                    <input type="email" class="form-control" id="steparrow-gen-info-email-input" name="email" placeholder="Enter email" required >
+                                                    <input type="email" class="form-control" id="steparrow-gen-info-email-input" name="email" placeholder="Enter email" value="{{!empty($detail->email) ? $detail->email : ''}}" required >
                                                 </div>
                                             </div>
                                         </div>
@@ -127,13 +128,13 @@
                                         <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-address-input">Address</label>
-                                                    <textarea type="text" class="form-control" id="steparrow-gen-info-address-input" name="address" placeholder="Enter address" required ></textarea>
+                                                    <textarea type="text" class="form-control" id="steparrow-gen-info-address-input" name="address" placeholder="Enter address"  required >{{!empty($detail->address) ? $detail->address : ''}}</textarea>
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-occupation-input">Occupation</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-occupation-input" name="occupation" placeholder="Enter occupation" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-occupation-input" name="occupation" placeholder="Enter occupation" value="{{!empty($detail->occupation) ? $detail->occupation : ''}}" required >
                                                 </div>
                                             </div>
                                         </div>
@@ -151,13 +152,13 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-bank-input">Bank Name</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-bank-input" name="bank_name" placeholder="Enter bank name" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-bank-input" name="bank_name" value="{{!empty($detail->bank_name) ? $detail->bank_name : ''}}" placeholder="Enter bank name" required >
                                                 </div>
                                             </div>
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-ifdc-input">IFSC</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-ifsc-input" name="ifsc" 
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-ifsc-input" name="ifsc" value="{{!empty($detail->ifsc) ? $detail->ifsc : ''}}" 
                                                         placeholder="Enter IFSC" required  
                                                         title="Enter a valid IFSC code" oninput="this.value = this.value.toUpperCase();">
                                                 </div>
@@ -167,7 +168,7 @@
                                             <div class="col-lg-6">
                                                 <div class="mb-3">
                                                     <label class="form-label" for="steparrow-gen-info-account-input">Account Number</label>
-                                                    <input type="text" class="form-control" id="steparrow-gen-info-account-input" name="account_num" placeholder="Enter account number" required >
+                                                    <input type="text" class="form-control" id="steparrow-gen-info-account-input" name="account_num" placeholder="Enter account number" value="{{!empty($detail->account_num) ? $detail->account_num : ''}}" required >
                                                 </div>
                                             </div>
                                         
@@ -285,17 +286,16 @@
        @section('script')
   
     <!-- JAVASCRIPT -->
-    <script src="{{asset('public/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/simplebar/simplebar.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/node-waves/waves.min.js')}}"></script>
-    <script src="{{asset('public/assets/libs/feather-icons/feather.min.js')}}"></script>
-    <script src="{{asset('public/assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
-    <script src="{{asset('public/assets/js/plugins.js')}}"></script>
+    <script src="{{asset('assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+    <script src="{{asset('assets/libs/simplebar/simplebar.min.js')}}"></script>
+    <script src="{{asset('assets/libs/node-waves/waves.min.js')}}"></script>
+    <script src="{{asset('assets/libs/feather-icons/feather.min.js')}}"></script>
+    <script src="{{asset('assets/js/pages/plugins/lord-icon-2.1.0.js')}}"></script>
+    <script src="{{asset('assets/js/plugins.js')}}"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script src="{{asset('public/assets/js/pages/form-wizard.init.js')}}"></script>
-    <script src="{{asset('public/assets/js/app.js')}}"></script>
+    <script src="{{asset('assets/js/pages/form-wizard.init.js')}}"></script>
+    <script src="{{asset('assets/js/app.js')}}"></script>
 
-    <script src="{{ asset('public/assets/js/validation.js') }}"></script>
     <script>
 $(document).ready(function () {
     var form = $("#addCustomer");

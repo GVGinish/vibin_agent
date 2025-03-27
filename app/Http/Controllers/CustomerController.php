@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\CustomerModel;
 use App\Models\PolicyModel;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Log;
+
 use DateTime;
 
 class CustomerController extends Controller
@@ -13,9 +15,18 @@ class CustomerController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index($type = null)
     {
-        return view('add_customer_page');
+        if($type !== 'new'){
+
+            $detail = CustomerModel::where('customer_id',$type)->first();
+
+        }else{
+            $detail = "";
+
+        }
+
+        return view('add_customer_page',compact('detail'));
     }
 
    
@@ -50,25 +61,29 @@ class CustomerController extends Controller
     
         DB::beginTransaction();
         try {
-            $lastCustomer = CustomerModel::orderBy('customer_id', 'desc')->first();
-            $lastId = $lastCustomer ? (int) str_replace('CUST', '', $lastCustomer->customer_id) : 0;
-            $rid = 'CUST' . str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
-    
-            $store = new CustomerModel();
-            $store->customer_id = $rid; 
-            $store->username = $request->username; 
-            $store->father_name = $request->father_name;  
-            $store->mother_name = $request->mother_name;  
-            $store->dob = $request->dob;  
-            $store->nominee_name = $request->nominee_name;  
-            $store->nominee_dob = $request->nominee_dob;  
-            $store->phone = $request->phone;
-            $store->email = $request->email;  
-            $store->address = $request->address;  
-            $store->occupation = $request->occupation;  
-            $store->bank_name = $request->bank_name;
-            $store->ifsc = $request->ifsc;  
-            $store->account_num = $request->account_num;
+            if(empty($request->customer_id)){
+                $lastCustomer = CustomerModel::orderBy('customer_id', 'desc')->first();
+                $lastId = $lastCustomer ? (int) str_replace('CUST', '', $lastCustomer->customer_id) : 0;
+                $rid = 'CUST' . str_pad($lastId + 1, 3, '0', STR_PAD_LEFT);
+        
+                $store = new CustomerModel();
+                $store->customer_id = $rid; 
+                $store->username = $request->username; 
+                $store->father_name = $request->father_name;  
+                $store->mother_name = $request->mother_name;  
+                $store->dob = $request->dob;  
+                $store->nominee_name = $request->nominee_name;  
+                $store->nominee_dob = $request->nominee_dob;  
+                $store->phone = $request->phone;
+                $store->email = $request->email;  
+                $store->address = $request->address;  
+                $store->occupation = $request->occupation;  
+                $store->bank_name = $request->bank_name;
+                $store->ifsc = $request->ifsc;  
+                $store->account_num = $request->account_num;
+                $store->save();
+            }
+
     
             $policy_type = $request->policy_type;  
             $term_amount = $request->premium_amount;  
@@ -133,9 +148,8 @@ class CustomerController extends Controller
                     $counter++;
                 }
             }
-    
             $policy = new PolicyModel();
-            $policy->customer_id = $rid;
+            $policy->customer_id = (!empty($request->customer_id)) ? $request->customer_id : $rid;
             $policy->policy_number = $request->policy_number;
             $policy->policy_type = $request->policy_type;
             $policy->premium_amount = $request->premium_amount;
@@ -144,11 +158,13 @@ class CustomerController extends Controller
             $policy->maturity_term = $request->maturity_term;
             $policy->term_schedule = json_encode($termDates);    
     
-            if ($store->save() && $policy->save()) {
+            if ($policy->save()) {
                 DB::commit();
                 return response()->json(['status' => 'success', 'message' => 'Policy added successfully']);
             }
         } catch (\Exception $e) {
+ 
+
             DB::rollback();
             return response()->json(['status' => 'error', 'message' => 'Please check the data', 'error' => $e->getMessage()]);
         }
